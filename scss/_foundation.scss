@@ -1,0 +1,86 @@
+//Comments using two forward slashes will not be compiled into the css.
+// Color Pallet 
+$baseColor: #f6f6f6;// light grey 
+$borderColor: #cccccc; // grey 
+$accentColor: #ee7e12; // orange 
+$secondaryAccentColor: #6c63ff; // purple 
+$primaryTextColor: #0b0e0e; // soft black 
+$secondaryTextColor: #3f3d56ff; // off black 
+$glassUIColor: #FFF;
+
+// Font-sizes big to small based on Major Third Scale
+$fontOne: 3.052rem;
+$fontTwo: 2.44rem;
+$fontThree: 1.953rem;
+$fontFour: 1.56rem;
+$fontFive: 1.25rem;
+$fontSix: 1rem;//browser default
+$fontSeven: .8rem;
+
+// Spacing for margin/padding 
+$sectionVerticalSpacing: 3rem;
+
+
+// other variables 
+$borderRadius: 15px;
+$borderRadiusButton: 15px;
+// Mixins
+@mixin glassBackground {
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+	backdrop-filter: blur(4px) saturate(180%);
+    background-color: $glassUIColor;
+    border-radius: 12px;
+    border: 1px solid $borderColor;
+}
+@mixin sectionTopClipPath {
+    -webkit-clip-path: polygon(0 0, 50% 7vw, 100% 0%, 100% 100%, 0 0);
+    -moz-clip-path: polygon(0 0, 50% 7vw, 100% 0%, 100% 100%, 0 0);
+    -ms-clip-path: polygon(0 0, 50% 7vw, 100% 0%, 100% 100%, 0 0);
+    -o-clip-path: polygon(0 0, 50% 7vw, 100% 0%, 100% 100%, 0 0);
+    clip-path: polygon(0 0, 50% 7vw, 100% 0%, 100% 100%, 0 0);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+/** Global **/
+html {
+	box-sizing: border-box;
+  }
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+body {
+	background-color: $baseColor;
+}
+h1, h3, h3, h4, h5, h6, button, label {
+	color: $primaryTextColor;
+}
+h1 {
+	font-size: $fontOne;
+}
+h2 {
+	font-size: $fontTwo;
+}
+h3, h4, h5, h6 {
+	font-size: $fontThree;
+}
+label {
+	font-size: $fontFour;
+}
+p, span, ul li {
+	color: $secondaryTextColor;
+}
+p, span, ul li, button, a {
+	font-size: $fontFive;
+}
+button {
+	background-color: transparent;
+	border: 2px solid $accentColor;
+	border-radius: $borderRadiusButton;
+}
+/** TODO **/
+button:hover, button:focus {
+
+}
+button:focus {
+
+}

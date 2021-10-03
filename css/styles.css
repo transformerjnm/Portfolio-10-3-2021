@@ -1,0 +1,110 @@
+/**
+CSS Naming Convention is BEM with namespaces as needed
+
+Namespace: *- 
+Block: starts lowercase follows namespace if needed
+Element: _*
+Modifier: __*
+**/
+/** Global **/
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #f6f6f6;
+}
+
+h1, h3, h3, h4, h5, h6, button, label {
+  color: #0b0e0e;
+}
+
+h1 {
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.44rem;
+}
+
+h3, h4, h5, h6 {
+  font-size: 1.953rem;
+}
+
+label {
+  font-size: 1.56rem;
+}
+
+p, span, ul li {
+  color: #3f3d56ff;
+}
+
+p, span, ul li, button, a {
+  font-size: 1.25rem;
+}
+
+button {
+  background-color: transparent;
+  border: 2px solid #ee7e12;
+  border-radius: 15px;
+}
+
+/** TODO **/
+/** Helper Classes **/
+.h-hide {
+  display: none;
+}
+
+/** layout classes **/
+.l-positionAbsolute {
+  position: absolute;
+}
+
+.l-positionAbsolute .l-positionAbsolute_centerVerticalPosition {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.l-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 0;
+  /** Two column grid **/
+  /** Three column grid **/
+}
+
+.l-grid .l-grid_TwoCol1 {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  -ms-grid-column-span: 6;
+}
+
+.l-grid .l-grid_TwoCol2 {
+  grid-column-start: 6;
+  grid-column-end: 12;
+  -ms-grid-column-span: 6;
+}
+
+.l-grid .l-grid_ThreeCol1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  -ms-grid-column-span: 4;
+}
+
+.l-grid .l-grid_ThreeCol2 {
+  grid-column-start: 4;
+  grid-column-end: 8;
+  -ms-grid-column-span: 4;
+}
+
+.l-grid .l-grid_ThreeCol3 {
+  grid-column-start: 8;
+  grid-column-end: 12;
+  -ms-grid-column-span: 4;
+}
+/*# sourceMappingURL=styles.css.map */
