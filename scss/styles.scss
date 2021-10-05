@@ -6,11 +6,14 @@ Block: starts lowercase follows namespace if needed
 Element: _*
 Modifier: __*
 **/
-@import '_foundation.scss'; 
+@import "_foundation.scss";
 
 /** Helper Classes **/
 .h-hide {
 	display: none;
+}
+.h-floatRight {
+	float: right;
 }
 
 /** layout classes **/
@@ -25,7 +28,8 @@ Modifier: __*
 .l-grid {
 	display: -ms-grid;
 	display: grid;
-	-ms-grid-columns: 1fr 0 1fr 0 1fr 0 1fr 0 1fr 0 1fr 0 1fr 0 1fr 0 1fr 0 1fr 0 1fr 0 1fr;
+	-ms-grid-columns: 1fr 0 1fr 0 1fr 0 1fr 0 1fr 0 1fr 0 1fr 0 1fr 0 1fr 0 1fr 0
+		1fr 0 1fr;
 	grid-template-columns: repeat(12, 1fr);
 	-webkit-column-gap: 0;
 	-moz-column-gap: 0;
@@ -51,11 +55,25 @@ Modifier: __*
 		grid-column-start: 4;
 		grid-column-end: 8;
 		-ms-grid-column-span: 4;
-
 	}
 	.l-grid_ThreeCol3 {
 		grid-column-start: 8;
 		grid-column-end: 12;
 		-ms-grid-column-span: 4;
 	}
+}
+
+/** Page Order **/
+.container {
+	margin: 0 1rem;
+}
+.resumeRightButton {
+	width: 100px;
+	display: block;
+	margin: 1rem 0.5rem 0 auto;
+}
+.headshotImage {
+	border-radius: 50%;
+	margin: 1rem auto;
+	display: block;
 }

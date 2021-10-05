@@ -11,52 +11,102 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
+  font-family: "Bahnschrift", Arial, sans-serif;
 }
 
 body {
   background-color: #f6f6f6;
 }
 
-h1, h3, h3, h4, h5, h6, button, label {
+h1,
+h3,
+h4,
+h5,
+h6,
+button,
+label,
+.button {
   color: #0b0e0e;
 }
 
 h1 {
-  font-size: 3.052rem;
+  font-size: 2.44rem;
+  margin: 1rem 0;
 }
 
 h2 {
-  font-size: 2.44rem;
-}
-
-h3, h4, h5, h6 {
   font-size: 1.953rem;
+  font-weight: normal;
+  margin-top: 0;
 }
 
-label {
+h1,
+h2 {
+  text-align: center;
+}
+
+h3,
+h4,
+h5,
+h6 {
   font-size: 1.56rem;
 }
 
-p, span, ul li {
-  color: #3f3d56ff;
-}
-
-p, span, ul li, button, a {
+label {
   font-size: 1.25rem;
 }
 
-button {
+p,
+span,
+ul li,
+h2 {
+  color: #3f3d56ff;
+}
+
+p,
+span,
+ul li,
+button,
+.button,
+a {
+  font-size: 1rem;
+}
+
+button,
+.button {
   background-color: transparent;
   border: 2px solid #ee7e12;
   border-radius: 15px;
+  padding: 0.25rem 0.5rem;
+  text-decoration: none;
+  text-align: center;
+  background-color: #f6f6f6;
 }
 
 /** TODO **/
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  outline: 1px solid #ee7e12;
+}
+
+button:focus,
+.button:focus {
+  transform: scale(1.05);
+}
+
 /** Helper Classes **/
 .h-hide {
   display: none;
+}
+
+.h-floatRight {
+  float: right;
 }
 
 /** layout classes **/
@@ -106,5 +156,22 @@ button {
   grid-column-start: 8;
   grid-column-end: 12;
   -ms-grid-column-span: 4;
+}
+
+/** Page Order **/
+.container {
+  margin: 0 1rem;
+}
+
+.resumeRightButton {
+  width: 100px;
+  display: block;
+  margin: 1rem 0.5rem 0 auto;
+}
+
+.headshotImage {
+  border-radius: 50%;
+  margin: 1rem auto;
+  display: block;
 }
 /*# sourceMappingURL=styles.css.map */
