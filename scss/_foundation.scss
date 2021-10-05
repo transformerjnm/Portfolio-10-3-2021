@@ -1,6 +1,7 @@
 //Comments using two forward slashes will not be compiled into the css.
 // Color Pallet
 $baseColor: #f6f6f6; // light grey
+$lightBaseColor: #fff;
 $borderColor: #cccccc; // grey
 $accentColor: #ee7e12; // orange
 $secondaryAccentColor: #6c63ff; // purple
@@ -29,10 +30,14 @@ $desktopFontSeven: 0.8rem;
 
 // Spacing for margin/padding
 $sectionVerticalSpacing: 3rem;
+$sectionTopClipPathSpacing: 7vw;
+$containerSpacing: 1rem;
+$sectionOverlapSpacing: 3rem;
 
 // other variables
 $borderRadius: 15px;
 $borderRadiusButton: 15px;
+
 // Mixins
 @mixin glassBackground {
 	-webkit-backdrop-filter: blur(16px) saturate(180%);
@@ -42,13 +47,41 @@ $borderRadiusButton: 15px;
 	border: 1px solid $borderColor;
 }
 @mixin sectionTopClipPath {
-	-webkit-clip-path: polygon(0 0, 50% 7vw, 100% 0%, 100% 100%, 0 0);
-	-moz-clip-path: polygon(0 0, 50% 7vw, 100% 0%, 100% 100%, 0 0);
-	-ms-clip-path: polygon(0 0, 50% 7vw, 100% 0%, 100% 100%, 0 0);
-	-o-clip-path: polygon(0 0, 50% 7vw, 100% 0%, 100% 100%, 0 0);
-	clip-path: polygon(0 0, 50% 7vw, 100% 0%, 100% 100%, 0 0);
-	padding-top: 5rem;
-	padding-bottom: 5rem;
+	-webkit-clip-path: polygon(
+		0 0,
+		50% $sectionTopClipPathSpacing,
+		100% 0%,
+		100% 100%,
+		0 100%
+	);
+	-moz-clip-path: polygon(
+		0 0,
+		50% $sectionTopClipPathSpacing,
+		100% 0%,
+		100% 100%,
+		0 100%
+	);
+	-ms-clip-path: polygon(
+		0 0,
+		50% $sectionTopClipPathSpacing,
+		100% 0%,
+		100% 100%,
+		0 100%
+	);
+	-o-clip-path: polygon(
+		0 0,
+		50% $sectionTopClipPathSpacing,
+		100% 0%,
+		100% 100%,
+		0 100%
+	);
+	clip-path: polygon(
+		0 0,
+		50% $sectionTopClipPathSpacing,
+		100% 0%,
+		100% 100%,
+		0 100%
+	);
 }
 /** Global **/
 html {
@@ -62,6 +95,7 @@ html {
 }
 body {
 	background-color: $baseColor;
+	margin: 0;
 }
 h1,
 h3,
@@ -119,7 +153,6 @@ button,
 	text-align: center;
 	background-color: $baseColor;
 }
-/** TODO **/
 button:hover,
 button:focus,
 .button:hover,

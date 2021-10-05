@@ -20,6 +20,7 @@ html {
 
 body {
   background-color: #f6f6f6;
+  margin: 0;
 }
 
 h1,
@@ -87,7 +88,6 @@ button,
   background-color: #f6f6f6;
 }
 
-/** TODO **/
 button:hover,
 button:focus,
 .button:hover,
@@ -102,6 +102,10 @@ button:focus,
 
 /** Helper Classes **/
 .h-hide {
+  display: none;
+}
+
+.h-hideOnMobile {
   display: none;
 }
 
@@ -122,43 +126,30 @@ button:focus,
 
 .l-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(11, 1fr);
   column-gap: 0;
   /** Two column grid **/
-  /** Three column grid **/
 }
 
-.l-grid .l-grid_TwoCol1 {
+.l-grid .l-grid_TwoCol1,
+.l-grid .l-grid_TwoCol2,
+.l-grid .l-grid_ThreeCol1,
+.l-grid .l-grid_ThreeCol2,
+.l-grid .l-grid_ThreeCol3 {
   grid-column-start: 1;
-  grid-column-end: 6;
-  -ms-grid-column-span: 6;
-}
-
-.l-grid .l-grid_TwoCol2 {
-  grid-column-start: 6;
   grid-column-end: 12;
-  -ms-grid-column-span: 6;
+  -ms-grid-column-span: 12;
 }
 
 .l-grid .l-grid_ThreeCol1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  -ms-grid-column-span: 4;
-}
-
-.l-grid .l-grid_ThreeCol2 {
-  grid-column-start: 4;
-  grid-column-end: 8;
-  -ms-grid-column-span: 4;
-}
-
-.l-grid .l-grid_ThreeCol3 {
-  grid-column-start: 8;
-  grid-column-end: 12;
-  -ms-grid-column-span: 4;
+  order: 3;
 }
 
 /** Page Order **/
+.heroHeader {
+  min-height: calc( 100vh - (7vw + 3rem));
+}
+
 .container {
   margin: 0 1rem;
 }
@@ -173,5 +164,65 @@ button:focus,
   border-radius: 50%;
   margin: 1rem auto;
   display: block;
+}
+
+.accentSectionClipped {
+  -moz-clip-path: polygon(0 0, 50% 7vw, 100% 0%, 100% 100%, 0 100%);
+  -ms-clip-path: polygon(0 0, 50% 7vw, 100% 0%, 100% 100%, 0 100%);
+  -o-clip-path: polygon(0 0, 50% 7vw, 100% 0%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 50% 7vw, 100% 0%, 100% 100%, 0 100%);
+  background-color: #ee7e12;
+  padding: 3rem 1rem calc(3rem + 3rem) 1rem;
+  margin-bottom: -3rem;
+}
+
+.accentSectionClipped p {
+  color: #0b0e0e;
+}
+
+.accentSectionClipped .robotImage {
+  margin: 3rem auto;
+  display: block;
+}
+
+.skillCard {
+  background-color: #fff;
+  z-index: 3;
+  position: relative;
+  margin: 0 1rem;
+  text-align: center;
+}
+
+.skillCard h3 {
+  margin-top: 0;
+}
+
+@media only screen and (min-width: 1200px) {
+  .l-grid_TwoCol1 {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    -ms-grid-column-span: 6;
+  }
+  .l-grid_TwoCol2 {
+    grid-column-start: 6;
+    grid-column-end: 12;
+    -ms-grid-column-span: 6;
+  }
+  /** Three column grid **/
+  .l-grid_ThreeCol1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    -ms-grid-column-span: 4;
+  }
+  .l-grid_ThreeCol2 {
+    grid-column-start: 4;
+    grid-column-end: 8;
+    -ms-grid-column-span: 4;
+  }
+  .l-grid_ThreeCol3 {
+    grid-column-start: 8;
+    grid-column-end: 12;
+    -ms-grid-column-span: 4;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
