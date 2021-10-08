@@ -101,16 +101,16 @@ button:focus,
 }
 
 /** Helper Classes **/
-.h-hide {
-  display: none;
+.h-flex {
+  display: flex;
 }
 
-.h-hideOnMobile {
-  display: none;
+.h-flex.h-flex__column {
+  flex-direction: column;
 }
 
-.h-floatRight {
-  float: right;
+.h-flex.h-flex_verticalCenter {
+  justify-content: center;
 }
 
 /** layout classes **/
@@ -157,12 +157,12 @@ button:focus,
 .resumeRightButton {
   width: 100px;
   display: block;
-  margin: 1rem 0.5rem 0 auto;
+  margin: 1rem 0.8rem 0 auto;
 }
 
 .headshotImage {
   border-radius: 50%;
-  margin: 1rem auto;
+  margin: 3rem auto 0.8rem auto;
   display: block;
 }
 
@@ -172,8 +172,8 @@ button:focus,
   -o-clip-path: polygon(0 0, 50% 7vw, 100% 0%, 100% 100%, 0 100%);
   clip-path: polygon(0 0, 50% 7vw, 100% 0%, 100% 100%, 0 100%);
   background-color: #ee7e12;
-  padding: 3rem 1rem calc(3rem + 3rem) 1rem;
-  margin-bottom: -3rem;
+  padding: 3rem 1rem calc(3rem + 6rem) 1rem;
+  margin-bottom: -6rem;
 }
 
 .accentSectionClipped p {
@@ -185,41 +185,102 @@ button:focus,
   display: block;
 }
 
-.skillCard {
+.skillsSection .skillsSection_skillsImage {
+  margin: auto;
+  display: block;
+}
+
+.skillsSection .skillsSection_skillCard {
   background-color: #fff;
   z-index: 3;
   position: relative;
-  margin: 0 1rem;
-  text-align: center;
+  margin: 1rem 1rem;
+  border-radius: 15px;
+  padding: 1.56rem 1.953rem;
 }
 
-.skillCard h3 {
+.skillsSection .skillsSection_skillCard:nth-child(1) {
   margin-top: 0;
 }
 
+.skillsSection .skillsSection_skillCard img {
+  margin: auto;
+  display: block;
+}
+
+.skillsSection .skillsSection_skillCard h3 {
+  margin-top: 1.56rem;
+  margin-bottom: 0.8rem;
+}
+
+.skillsSection .skillsSection_skillCard ul {
+  padding-left: 0;
+  margin: 0;
+}
+
+.skillsSection .skillsSection_skillCard ul li {
+  list-style: none;
+}
+
+.gitChainBackgroundVertical {
+  background: transparent url("../images/github-commit-chain-vertical.svg") repeat-y 60vw 0;
+}
+
+.gitChainBackgroundContainer {
+  width: 100vw;
+}
+
+.gitChainBackgroundContainer .gitChainBackgroundContainer_gitChainBackground {
+  background: transparent url("../images/github-commit-chain.svg") no-repeat -22vw 45px;
+  height: 135px;
+}
+
+.projectsSection {
+  margin: 3rem 1rem;
+}
+
+.projectsSection .projectsSection_contentBackground {
+  backdrop-filter: blur(2px) saturate(180%);
+  -webkit-backdrop-filter: blur(2px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  padding: 1rem;
+}
+
+.projectsSection .projectSection_button {
+  margin: 3rem auto;
+  display: block;
+}
+
+.projectsSection .l-grid_TwoCol1.gitChainBackgroundContainer_gitChainBackground {
+  order: 2;
+}
+
 @media only screen and (min-width: 1200px) {
-  .l-grid_TwoCol1 {
+  .l-grid {
+    /** Three column grid **/
+  }
+  .l-grid .l-grid_TwoCol1 {
     grid-column-start: 1;
     grid-column-end: 6;
     -ms-grid-column-span: 6;
   }
-  .l-grid_TwoCol2 {
+  .l-grid .l-grid_TwoCol2 {
     grid-column-start: 6;
     grid-column-end: 12;
     -ms-grid-column-span: 6;
   }
-  /** Three column grid **/
-  .l-grid_ThreeCol1 {
+  .l-grid .l-grid_ThreeCol1 {
     grid-column-start: 1;
     grid-column-end: 4;
     -ms-grid-column-span: 4;
   }
-  .l-grid_ThreeCol2 {
+  .l-grid .l-grid_ThreeCol2 {
     grid-column-start: 4;
     grid-column-end: 8;
     -ms-grid-column-span: 4;
   }
-  .l-grid_ThreeCol3 {
+  .l-grid .l-grid_ThreeCol3 {
     grid-column-start: 8;
     grid-column-end: 12;
     -ms-grid-column-span: 4;

@@ -2,12 +2,12 @@
 // Color Pallet
 $baseColor: #f6f6f6; // light grey
 $lightBaseColor: #fff;
-$borderColor: #cccccc; // grey
+//$borderColor: #cccccc; // grey
 $accentColor: #ee7e12; // orange
 $secondaryAccentColor: #6c63ff; // purple
 $primaryTextColor: #0b0e0e; // soft black
 $secondaryTextColor: #3f3d56ff; // off black
-$glassUIColor: #fff;
+$glassUIColor: rgba(255, 255, 255, 0.5);
 
 // Font-sizes Major Third
 //mobile
@@ -19,69 +19,49 @@ $fontFive: 1rem; //browser default
 $fontSix: 0.9rem;
 $fontSeven: 0.8rem;
 
-//desktop
-$desktopFontOne: 3.052rem;
-$desktopFontTwo: 2.44rem;
-$desktopFontThree: 1.953rem;
-$desktopFontFour: 1.56rem;
-$desktopFontFive: 1.25rem;
-$desktopFontSix: 1rem; //browser default
-$desktopFontSeven: 0.8rem;
+$desktopMediaQueryWidth: 1200px;
 
 // Spacing for margin/padding
-$sectionVerticalSpacing: 3rem;
+$containerSpacing: 1rem; //left and right spacing of the page
+$sectionVerticalSpacing: 3rem; //spacing between each section
+$spacingOne: 2.44rem;
+$spacingTwo: 1.953rem;
+$spacingThree: 1.56rem;
+$spacingFour: 1.25rem;
+$spacingFive: 1rem; //browser default
+$spacingSix: 0.8rem;
+//For the section with the clip path and overlapping cards
 $sectionTopClipPathSpacing: 7vw;
-$containerSpacing: 1rem;
-$sectionOverlapSpacing: 3rem;
+$sectionOverlapSpacing: 6rem;
 
 // other variables
 $borderRadius: 15px;
 $borderRadiusButton: 15px;
 
+@media only screen and (min-width: $desktopMediaQueryWidth) {
+	//desktop
+	$FontOne: 3.052rem;
+	$dFontTwo: 2.44rem;
+	$FontThree: 1.953rem;
+	$FontFour: 1.56rem;
+	$FontFive: 1.25rem;
+	$FontSix: 1rem; //browser default
+	$FontSeven: 0.8rem;
+
+	$spacingOne: 3.052rem;
+	$spacingTwo: 2.44rem;
+	$spacingThree: 1.953rem;
+	$spacingFour: 1.56rem;
+	$spacingFive: 1.25rem;
+	$spacingSix: 1rem;
+}
+
 // Mixins
 @mixin glassBackground {
-	-webkit-backdrop-filter: blur(16px) saturate(180%);
-	backdrop-filter: blur(4px) saturate(180%);
+	backdrop-filter: blur(2px) saturate(180%);
+	-webkit-backdrop-filter: blur(2px) saturate(180%);
 	background-color: $glassUIColor;
-	border-radius: 12px;
-	border: 1px solid $borderColor;
-}
-@mixin sectionTopClipPath {
-	-webkit-clip-path: polygon(
-		0 0,
-		50% $sectionTopClipPathSpacing,
-		100% 0%,
-		100% 100%,
-		0 100%
-	);
-	-moz-clip-path: polygon(
-		0 0,
-		50% $sectionTopClipPathSpacing,
-		100% 0%,
-		100% 100%,
-		0 100%
-	);
-	-ms-clip-path: polygon(
-		0 0,
-		50% $sectionTopClipPathSpacing,
-		100% 0%,
-		100% 100%,
-		0 100%
-	);
-	-o-clip-path: polygon(
-		0 0,
-		50% $sectionTopClipPathSpacing,
-		100% 0%,
-		100% 100%,
-		0 100%
-	);
-	clip-path: polygon(
-		0 0,
-		50% $sectionTopClipPathSpacing,
-		100% 0%,
-		100% 100%,
-		0 100%
-	);
+	border-radius: $borderRadius;
 }
 /** Global **/
 html {

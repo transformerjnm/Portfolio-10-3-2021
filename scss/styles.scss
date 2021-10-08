@@ -9,16 +9,15 @@ Modifier: __*
 @import "_foundation.scss";
 
 /** Helper Classes **/
-.h-hide {
-	display: none;
+.h-flex {
+	display: flex;
+	&.h-flex__column {
+		flex-direction: column;
+	}
+	&.h-flex_verticalCenter {
+		justify-content: center;
+	}
 }
-.h-hideOnMobile {
-	display: none;
-}
-.h-floatRight {
-	float: right;
-}
-
 /** layout classes **/
 .l-positionAbsolute {
 	position: absolute;
@@ -64,11 +63,11 @@ Modifier: __*
 .resumeRightButton {
 	width: 100px;
 	display: block;
-	margin: 1rem 0.5rem 0 auto;
+	margin: $containerSpacing $spacingSix 0 auto;
 }
 .headshotImage {
 	border-radius: 50%;
-	margin: 1rem auto;
+	margin: $sectionVerticalSpacing auto $spacingSix auto;
 	display: block;
 }
 .accentSectionClipped {
@@ -86,42 +85,92 @@ Modifier: __*
 		display: block;
 	}
 }
-.skillCard {
-	background-color: $lightBaseColor;
-	z-index: 3;
-	position: relative;
-	margin: 0 $containerSpacing;
-	text-align: center;
-	h3 {
-		margin-top: 0;
+.skillsSection {
+	.skillsSection_skillsImage {
+		margin: auto;
+		display: block;
+	}
+	.skillsSection_skillCard {
+		background-color: $lightBaseColor;
+		z-index: 3;
+		position: relative;
+		margin: $spacingFive $containerSpacing;
+		border-radius: $borderRadius;
+		padding: $spacingThree $spacingTwo;
+		&:nth-child(1) {
+			margin-top: 0;
+		}
+		img {
+			margin: auto;
+			display: block;
+		}
+		h3 {
+			margin-top: $spacingThree;
+			margin-bottom: $spacingSix;
+		}
+		ul {
+			padding-left: 0;
+			margin: 0;
+			li {
+				list-style: none;
+			}
+		}
+	}
+}
+.gitChainBackgroundVertical {
+	background: transparent url("../images/github-commit-chain-vertical.svg")
+		repeat-y 60vw 0;
+}
+.gitChainBackgroundContainer {
+	width: 100vw;
+	.gitChainBackgroundContainer_gitChainBackground {
+		background: transparent url("../images/github-commit-chain.svg") no-repeat -22vw
+			45px;
+		height: 135px;
 	}
 }
 
-@media only screen and (min-width: 1200px) {
-	.l-grid_TwoCol1 {
-		grid-column-start: 1;
-		grid-column-end: 6;
-		-ms-grid-column-span: 6;
+.projectsSection {
+	margin: $sectionVerticalSpacing $containerSpacing;
+	.projectsSection_contentBackground {
+		@include glassBackground;
+		padding: $spacingFive;
 	}
-	.l-grid_TwoCol2 {
-		grid-column-start: 6;
-		grid-column-end: 12;
-		-ms-grid-column-span: 6;
+	.projectSection_button {
+		margin: $sectionVerticalSpacing auto;
+		display: block;
 	}
-	/** Three column grid **/
-	.l-grid_ThreeCol1 {
-		grid-column-start: 1;
-		grid-column-end: 4;
-		-ms-grid-column-span: 4;
+	.l-grid_TwoCol1.gitChainBackgroundContainer_gitChainBackground {
+		order: 2;
 	}
-	.l-grid_ThreeCol2 {
-		grid-column-start: 4;
-		grid-column-end: 8;
-		-ms-grid-column-span: 4;
-	}
-	.l-grid_ThreeCol3 {
-		grid-column-start: 8;
-		grid-column-end: 12;
-		-ms-grid-column-span: 4;
+}
+@media only screen and (min-width: $desktopMediaQueryWidth) {
+	.l-grid {
+		.l-grid_TwoCol1 {
+			grid-column-start: 1;
+			grid-column-end: 6;
+			-ms-grid-column-span: 6;
+		}
+		.l-grid_TwoCol2 {
+			grid-column-start: 6;
+			grid-column-end: 12;
+			-ms-grid-column-span: 6;
+		}
+		/** Three column grid **/
+		.l-grid_ThreeCol1 {
+			grid-column-start: 1;
+			grid-column-end: 4;
+			-ms-grid-column-span: 4;
+		}
+		.l-grid_ThreeCol2 {
+			grid-column-start: 4;
+			grid-column-end: 8;
+			-ms-grid-column-span: 4;
+		}
+		.l-grid_ThreeCol3 {
+			grid-column-start: 8;
+			grid-column-end: 12;
+			-ms-grid-column-span: 4;
+		}
 	}
 }
