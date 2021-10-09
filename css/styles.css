@@ -141,17 +141,10 @@ button:focus,
   -ms-grid-column-span: 12;
 }
 
-.l-grid .l-grid_ThreeCol1 {
-  order: 3;
-}
-
 /** Page Order **/
 .heroHeader {
-  min-height: calc( 100vh - (7vw + 3rem));
-}
-
-.container {
   margin: 0 1rem;
+  min-height: calc( 100vh - (7vw + 3rem));
 }
 
 .resumeRightButton {
@@ -183,6 +176,10 @@ button:focus,
 .accentSectionClipped .robotImage {
   margin: 3rem auto;
   display: block;
+}
+
+.skillsSection .l-grid_ThreeCol1 {
+  order: 3;
 }
 
 .skillsSection .skillsSection_skillsImage {
@@ -254,6 +251,26 @@ button:focus,
 
 .projectsSection .l-grid_TwoCol1.gitChainBackgroundContainer_gitChainBackground {
   order: 2;
+}
+
+.additionalProjectsSection .additionalProjectsSection_card {
+  background-color: #fff;
+  margin: 1rem 1rem;
+  border-radius: 15px;
+  padding: 1.56rem 1.953rem;
+}
+
+.additionalProjectsSection .additionalProjectsSection_card img {
+  margin: auto;
+  display: block;
+}
+
+.additionalProjectsSection .additionalProjectsSection_card p {
+  text-align: center;
+}
+
+.additionalProjectsSection .additionalProjectsSection_icons img {
+  display: inline;
 }
 
 @media only screen and (min-width: 1200px) {

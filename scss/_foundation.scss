@@ -57,6 +57,43 @@ $borderRadiusButton: 15px;
 }
 
 // Mixins
+@mixin sectionTopClipPath {
+	-webkit-clip-path: polygon(
+		0 0,
+		50% $sectionTopClipPathSpacing,
+		100% 0%,
+		100% 100%,
+		0 100%
+	);
+	-moz-clip-path: polygon(
+		0 0,
+		50% $sectionTopClipPathSpacing,
+		100% 0%,
+		100% 100%,
+		0 100%
+	);
+	-ms-clip-path: polygon(
+		0 0,
+		50% $sectionTopClipPathSpacing,
+		100% 0%,
+		100% 100%,
+		0 100%
+	);
+	-o-clip-path: polygon(
+		0 0,
+		50% $sectionTopClipPathSpacing,
+		100% 0%,
+		100% 100%,
+		0 100%
+	);
+	clip-path: polygon(
+		0 0,
+		50% $sectionTopClipPathSpacing,
+		100% 0%,
+		100% 100%,
+		0 100%
+	);
+}
 @mixin glassBackground {
 	backdrop-filter: blur(2px) saturate(180%);
 	-webkit-backdrop-filter: blur(2px) saturate(180%);

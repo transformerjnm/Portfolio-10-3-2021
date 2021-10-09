@@ -46,19 +46,14 @@ Modifier: __*
 		grid-column-end: 12;
 		-ms-grid-column-span: 12;
 	}
-	.l-grid_ThreeCol1 {
-		order: 3;
-	}
 }
 
 /** Page Order **/
 .heroHeader {
+	margin: 0 $containerSpacing;
 	min-height: calc(
 		100vh - (#{$sectionTopClipPathSpacing} + #{$sectionVerticalSpacing})
 	);
-}
-.container {
-	margin: 0 $containerSpacing;
 }
 .resumeRightButton {
 	width: 100px;
@@ -86,6 +81,9 @@ Modifier: __*
 	}
 }
 .skillsSection {
+	.l-grid_ThreeCol1 {
+		order: 3;
+	}
 	.skillsSection_skillsImage {
 		margin: auto;
 		display: block;
@@ -142,6 +140,26 @@ Modifier: __*
 	}
 	.l-grid_TwoCol1.gitChainBackgroundContainer_gitChainBackground {
 		order: 2;
+	}
+}
+.additionalProjectsSection {
+	.additionalProjectsSection_card {
+		background-color: $lightBaseColor;
+		margin: $spacingFive $containerSpacing;
+		border-radius: $borderRadius;
+		padding: $spacingThree $spacingTwo;
+		img {
+			margin: auto;
+			display: block;
+		}
+		p {
+			text-align: center;
+		}
+	}
+	.additionalProjectsSection_icons {
+		img {
+			display: inline;
+		}
 	}
 }
 @media only screen and (min-width: $desktopMediaQueryWidth) {
