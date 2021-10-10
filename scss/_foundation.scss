@@ -2,7 +2,7 @@
 // Color Pallet
 $baseColor: #f6f6f6; // light grey
 $lightBaseColor: #fff;
-//$borderColor: #cccccc; // grey
+$borderColor: #cccccc; // grey
 $accentColor: #ee7e12; // orange
 $secondaryAccentColor: #6c63ff; // purple
 $primaryTextColor: #0b0e0e; // soft black
@@ -142,6 +142,7 @@ h4,
 h5,
 h6 {
 	font-size: $fontThree;
+	margin: $spacingTwo auto $spacingFive auto;
 }
 label {
 	font-size: $fontFour;
@@ -149,7 +150,8 @@ label {
 p,
 span,
 ul li,
-h2 {
+h2,
+input {
 	color: $secondaryTextColor;
 }
 p,
@@ -157,11 +159,19 @@ span,
 ul li,
 button,
 .button,
+input,
+textarea,
 a {
 	font-size: $fontFive;
 }
+input,
+textarea {
+	min-height: $fontTwo;
+	border: 1px solid $borderColor;
+}
 button,
-.button {
+.button,
+input[type="submit"] {
 	background-color: transparent;
 	border: 2px solid $accentColor;
 	border-radius: $borderRadiusButton;
@@ -173,10 +183,13 @@ button,
 button:hover,
 button:focus,
 .button:hover,
-.button:focus {
+.button:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
 	outline: 1px solid $accentColor;
 }
 button:focus,
-.button:focus {
+.button:focus,
+input[type="submit"]:focus {
 	transform: scale(1.05);
 }

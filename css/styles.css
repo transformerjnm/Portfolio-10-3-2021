@@ -55,6 +55,7 @@ h4,
 h5,
 h6 {
   font-size: 1.56rem;
+  margin: 1.953rem auto 1rem auto;
 }
 
 label {
@@ -64,7 +65,8 @@ label {
 p,
 span,
 ul li,
-h2 {
+h2,
+input {
   color: #3f3d56ff;
 }
 
@@ -73,12 +75,21 @@ span,
 ul li,
 button,
 .button,
+input,
+textarea,
 a {
   font-size: 1rem;
 }
 
+input,
+textarea {
+  min-height: 1.953rem;
+  border: 1px solid #cccccc;
+}
+
 button,
-.button {
+.button,
+input[type="submit"] {
   background-color: transparent;
   border: 2px solid #ee7e12;
   border-radius: 15px;
@@ -91,12 +102,15 @@ button,
 button:hover,
 button:focus,
 .button:hover,
-.button:focus {
+.button:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
   outline: 1px solid #ee7e12;
 }
 
 button:focus,
-.button:focus {
+.button:focus,
+input[type="submit"]:focus {
   transform: scale(1.05);
 }
 
@@ -228,8 +242,10 @@ button:focus,
 }
 
 .gitChainBackgroundContainer .gitChainBackgroundContainer_gitChainBackground {
-  background: transparent url("../images/github-commit-chain.svg") no-repeat -22vw 45px;
+  transform: rotate(180deg);
+  background: transparent url("../images/github-commit-chain.svg") repeat-x 0 45px;
   height: 135px;
+  width: calc(60vw + 30px);
 }
 
 .projectsSection {
@@ -269,8 +285,63 @@ button:focus,
   text-align: center;
 }
 
+.additionalProjectsSection .additionalProjectsSection_icons {
+  display: flex;
+  justify-content: space-around;
+}
+
 .additionalProjectsSection .additionalProjectsSection_icons img {
   display: inline;
+}
+
+.companiesWorked {
+  margin: 3rem 1rem;
+}
+
+.companiesWorked .companiesWorked_logos {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.myKnowledge {
+  margin: 3rem 1rem;
+}
+
+.myKnowledge ul {
+  padding-left: 0;
+}
+
+.myKnowledge ul:nth-child(1) {
+  margin-top: 0;
+}
+
+.myKnowledge ul li {
+  list-style: none;
+}
+
+.myKnowledge img {
+  margin: 1.56rem auto;
+  display: block;
+}
+
+.sayHelloForm {
+  backdrop-filter: blur(2px) saturate(180%);
+  -webkit-backdrop-filter: blur(2px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  margin: 3rem 1rem;
+  padding: 1.56rem;
+}
+
+.sayHelloForm label {
+  display: block;
+}
+
+.sayHelloForm input,
+.sayHelloForm textarea {
+  border-radius: 15px;
+  width: 100%;
 }
 
 @media only screen and (min-width: 1200px) {

@@ -122,9 +122,11 @@ Modifier: __*
 .gitChainBackgroundContainer {
 	width: 100vw;
 	.gitChainBackgroundContainer_gitChainBackground {
-		background: transparent url("../images/github-commit-chain.svg") no-repeat -22vw
+		transform: rotate(180deg);
+		background: transparent url("../images/github-commit-chain.svg") repeat-x 0
 			45px;
 		height: 135px;
+		width: calc(60vw + 30px);
 	}
 }
 
@@ -157,9 +159,48 @@ Modifier: __*
 		}
 	}
 	.additionalProjectsSection_icons {
+		display: flex;
+		justify-content: space-around;
 		img {
 			display: inline;
 		}
+	}
+}
+.companiesWorked {
+	margin: $sectionVerticalSpacing $containerSpacing;
+	.companiesWorked_logos {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+}
+.myKnowledge {
+	margin: $sectionVerticalSpacing $containerSpacing;
+	ul {
+		&:nth-child(1) {
+			margin-top: 0;
+		}
+		padding-left: 0;
+		li {
+			list-style: none;
+		}
+	}
+	img {
+		margin: $spacingThree auto;
+		display: block;
+	}
+}
+.sayHelloForm {
+	@include glassBackground;
+	margin: $sectionVerticalSpacing $containerSpacing;
+	padding: $spacingThree;
+	label {
+		display: block;
+	}
+	input,
+	textarea {
+		border-radius: $borderRadius;
+		width: 100%;
 	}
 }
 @media only screen and (min-width: $desktopMediaQueryWidth) {
