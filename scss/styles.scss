@@ -68,10 +68,7 @@ Modifier: __*
 .accentSectionClipped {
 	@include sectionTopClipPath;
 	background-color: $accentColor;
-	padding: $sectionVerticalSpacing $containerSpacing
-		calc(#{$sectionVerticalSpacing} + #{$sectionOverlapSpacing})
-		$containerSpacing;
-	margin-bottom: -$sectionOverlapSpacing;
+	padding: $sectionVerticalSpacing $containerSpacing;
 	p {
 		color: $primaryTextColor;
 	}
@@ -79,6 +76,12 @@ Modifier: __*
 		margin: $sectionVerticalSpacing auto;
 		display: block;
 	}
+}
+.accentSectionClipped__overlapSpacing {
+	margin-bottom: -$sectionOverlapSpacing;
+	padding: $sectionVerticalSpacing $containerSpacing
+		calc(#{$sectionVerticalSpacing} + #{$sectionOverlapSpacing})
+		$containerSpacing;
 }
 .skillsSection {
 	.l-grid_ThreeCol1 {
@@ -195,12 +198,58 @@ Modifier: __*
 	margin: $sectionVerticalSpacing $containerSpacing;
 	padding: $spacingThree;
 	label {
+		&:nth-child(1) {
+			margin-top: 0;
+		}
 		display: block;
+		margin-top: $spacingThree;
 	}
 	input,
 	textarea {
 		border-radius: $borderRadius;
 		width: 100%;
+	}
+	input[type="submit"] {
+		margin-top: $spacingThree;
+	}
+}
+.container {
+	margin: auto $containerSpacing;
+}
+footer {
+	.footerIcons {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		img {
+			margin: $spacingSix auto;
+		}
+		img:hover, img:focus {
+			transform: scale(1.1);
+		}
+	}
+	.footerDark {
+		background-color: $secondaryTextColor;
+		text-align: center;
+		padding: $sectionVerticalSpacing $containerSpacing $spacingFive
+			$containerSpacing;
+		span {
+			display: block;
+		}
+		a {
+			display: inline-block;
+		}
+		a,
+		a:visited,
+		span {
+			color: $lightBaseColor;
+			margin-top: $spacingSix;
+		}
+		.footerDark__center {
+			width: 100%;
+			text-align: center;
+		}
 	}
 }
 @media only screen and (min-width: $desktopMediaQueryWidth) {

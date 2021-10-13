@@ -97,6 +97,7 @@ input[type="submit"] {
   text-decoration: none;
   text-align: center;
   background-color: #f6f6f6;
+  cursor: pointer;
 }
 
 button:hover,
@@ -179,8 +180,7 @@ input[type="submit"]:focus {
   -o-clip-path: polygon(0 0, 50% 7vw, 100% 0%, 100% 100%, 0 100%);
   clip-path: polygon(0 0, 50% 7vw, 100% 0%, 100% 100%, 0 100%);
   background-color: #ee7e12;
-  padding: 3rem 1rem calc(3rem + 6rem) 1rem;
-  margin-bottom: -6rem;
+  padding: 3rem 1rem;
 }
 
 .accentSectionClipped p {
@@ -190,6 +190,11 @@ input[type="submit"]:focus {
 .accentSectionClipped .robotImage {
   margin: 3rem auto;
   display: block;
+}
+
+.accentSectionClipped__overlapSpacing {
+  margin-bottom: -6rem;
+  padding: 3rem 1rem calc(3rem + 6rem) 1rem;
 }
 
 .skillsSection .l-grid_ThreeCol1 {
@@ -255,7 +260,7 @@ input[type="submit"]:focus {
 .projectsSection .projectsSection_contentBackground {
   backdrop-filter: blur(2px) saturate(180%);
   -webkit-backdrop-filter: blur(2px) saturate(180%);
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 15px;
   padding: 1rem;
 }
@@ -328,7 +333,7 @@ input[type="submit"]:focus {
 .sayHelloForm {
   backdrop-filter: blur(2px) saturate(180%);
   -webkit-backdrop-filter: blur(2px) saturate(180%);
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 15px;
   margin: 3rem 1rem;
   padding: 1.56rem;
@@ -336,12 +341,66 @@ input[type="submit"]:focus {
 
 .sayHelloForm label {
   display: block;
+  margin-top: 1.56rem;
+}
+
+.sayHelloForm label:nth-child(1) {
+  margin-top: 0;
 }
 
 .sayHelloForm input,
 .sayHelloForm textarea {
   border-radius: 15px;
   width: 100%;
+}
+
+.sayHelloForm input[type="submit"] {
+  margin-top: 1.56rem;
+}
+
+.container {
+  margin: auto 1rem;
+}
+
+footer .footerIcons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer .footerIcons img {
+  margin: 0.8rem auto;
+}
+
+footer .footerIcons img:hover, footer .footerIcons img:focus {
+  transform: scale(1.1);
+}
+
+footer .footerDark {
+  background-color: #3f3d56ff;
+  text-align: center;
+  padding: 3rem 1rem 1rem 1rem;
+}
+
+footer .footerDark span {
+  display: block;
+}
+
+footer .footerDark a {
+  display: inline-block;
+}
+
+footer .footerDark a,
+footer .footerDark a:visited,
+footer .footerDark span {
+  color: #fff;
+  margin-top: 0.8rem;
+}
+
+footer .footerDark .footerDark__center {
+  width: 100%;
+  text-align: center;
 }
 
 @media only screen and (min-width: 1200px) {

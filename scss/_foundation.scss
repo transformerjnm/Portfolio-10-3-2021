@@ -7,7 +7,7 @@ $accentColor: #ee7e12; // orange
 $secondaryAccentColor: #6c63ff; // purple
 $primaryTextColor: #0b0e0e; // soft black
 $secondaryTextColor: #3f3d56ff; // off black
-$glassUIColor: rgba(255, 255, 255, 0.5);
+$glassUIColor: rgba(255, 255, 255, 0.8);
 
 // Font-sizes Major Third
 //mobile
@@ -179,6 +179,7 @@ input[type="submit"] {
 	text-decoration: none;
 	text-align: center;
 	background-color: $baseColor;
+	cursor: pointer;
 }
 button:hover,
 button:focus,
