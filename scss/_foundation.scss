@@ -126,12 +126,15 @@ label,
 }
 h1 {
 	font-size: $fontOne;
-	margin: 1rem 0;
+	margin-bottom: 0;
+	margin-top: $spacingTwo;
 }
 h2 {
 	font-size: $fontTwo;
 	font-weight: normal;
 	margin-top: 0;
+	margin-top: $spacingThree;
+	margin-bottom: $spacingSix;
 }
 h1,
 h2 {
@@ -143,6 +146,8 @@ h5,
 h6 {
 	font-size: $fontThree;
 	margin: $spacingTwo auto $spacingFive auto;
+	margin-top: $spacingThree;
+	margin-bottom: $spacingSix;
 }
 label {
 	font-size: $fontFour;
@@ -172,13 +177,12 @@ textarea {
 button,
 .button,
 input[type="submit"] {
-	background-color: transparent;
+	background-color: $lightBaseColor;
 	border: 2px solid $accentColor;
 	border-radius: $borderRadiusButton;
 	padding: 0.25rem 0.5rem;
 	text-decoration: none;
 	text-align: center;
-	background-color: $baseColor;
 	cursor: pointer;
 }
 button:hover,

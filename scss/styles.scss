@@ -84,6 +84,7 @@ Modifier: __*
 		$containerSpacing;
 }
 .skillsSection {
+	margin-bottom: $sectionVerticalSpacing;
 	.l-grid_ThreeCol1 {
 		order: 3;
 	}
@@ -104,10 +105,6 @@ Modifier: __*
 		img {
 			margin: auto;
 			display: block;
-		}
-		h3 {
-			margin-top: $spacingThree;
-			margin-bottom: $spacingSix;
 		}
 		ul {
 			padding-left: 0;
@@ -134,17 +131,27 @@ Modifier: __*
 }
 
 .projectsSection {
-	margin: $sectionVerticalSpacing $containerSpacing;
+	//margin: $sectionVerticalSpacing $containerSpacing;
+	padding: $containerSpacing;
+	&:nth-child(2) {
+		margin-bottom: -67px;
+	}
 	.projectsSection_contentBackground {
 		@include glassBackground;
 		padding: $spacingFive;
 	}
 	.projectSection_button {
-		margin: $sectionVerticalSpacing auto;
+		margin: 0 auto;
 		display: block;
 	}
-	.l-grid_TwoCol1.gitChainBackgroundContainer_gitChainBackground {
-		order: 2;
+	.projectSection_card {
+		@include glassBackground;
+		min-height: 150px;
+		margin: $spacingFive;
+		img {
+			display: block;
+			margin: auto;
+		}
 	}
 }
 .additionalProjectsSection {
@@ -195,7 +202,8 @@ Modifier: __*
 }
 .sayHelloForm {
 	@include glassBackground;
-	margin: $sectionVerticalSpacing $containerSpacing;
+	margin: $spacingThree $containerSpacing $sectionVerticalSpacing
+		$containerSpacing;
 	padding: $spacingThree;
 	label {
 		&:nth-child(1) {
@@ -225,7 +233,8 @@ footer {
 		img {
 			margin: $spacingSix auto;
 		}
-		img:hover, img:focus {
+		a:hover,
+		a:focus {
 			transform: scale(1.1);
 		}
 	}

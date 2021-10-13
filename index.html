@@ -77,11 +77,13 @@
 					</div>
 				</div>
 			</section>
-			<section class="projectsSection">
+			<div class="projectsSection">
 				<h4>Exciting Projects</h4>
 				<div class="l-grid">
 					<div class="l-grid_TwoCol1">
-						<img src="" alt="UsBank logo" loading="lazy">
+						<div class="projectSection_card  h-flex h-flex_verticalCenter">
+							<img src="images/Us-Bank-Logo.png" alt="UsBank logo" loading="lazy" width="171" height="50px">
+						</div>
 					</div>
 					<div class="l-grid_TwoCol2 projectsSection_contentBackground">
 						<p>UsBank is an elaborate Liferay(LR) content management system project.While working for Hero Digital, I maintained UsBank’s web site and improved the developer ecosystem.Which was used for internal training at Usbank and  provided services to other banks.</p>
@@ -93,17 +95,20 @@
 						</ul>
 					</div>
 				</div>
-				<div class="l-grid gitChainBackgroundContainer">
-					<div class="l-grid_TwoCol1 gitChainBackgroundContainer_gitChainBackground">
-
-					</div>
-					<div class="l-grid_TwoCol2">
-						<!-- TODO add aria for triggering opening.check requirements for focus state-->
-						<button class="projectSection_button">See more projects</button>
-					</div>
-				</div>
-			</section>		
+			</div>
 		</div>
+		<div class="projectsSection">
+			<div class="l-grid gitChainBackgroundContainer">
+				<div class="l-grid_TwoCol1 gitChainBackgroundContainer_gitChainBackground">
+
+				</div>
+				<div class="l-grid_TwoCol2">
+					<!-- TODO add aria for triggering opening.check requirements for focus state-->
+					<button class="projectSection_button" aria-expanded="false">See more projects</button>
+				</div>
+			</div>
+		</div>		
+		
 		<section class="additionalProjectsSection">
 			<div class="l-grid">
 				<div class="l-grid_ThreeCol1">
@@ -111,10 +116,10 @@
 						<img src="images/unanimity-large-logo.png" alt="Unanimity's logo" loading="lazy" width="222.483px" height="57.75px">
 						<p>A instant messenger</p>
 						<div class="additionalProjectsSection_icons">
-							<a href="" aria-label="View Unanimity instant messenger website">
+							<a href="" aria-label="View Unanimity instant messenger website"  rel="nofollow">
 								<img src="images/link-icon-light.svg" alt="" loading="lazy" width="25px" height="25px">
 							</a>
-							<a href="" aria-label="View Unanimity Instant messenger Github">
+							<a href="" aria-label="View Unanimity Instant messenger Github"  rel="nofollow">
 								<img src="images/github-logo-light.svg" alt="" loading="lazy" width="25.633px" height="25px">
 							</a>
 						</div>
@@ -125,10 +130,10 @@
 						<img src="images/georgia-gifts-logo.png" alt="Georgia Gifts' logo" loading="lazy" width="60.133px" height="60px">
 						<p>Personalized gifts</p>
 						<div class="additionalProjectsSection_icons">
-							<a href="" aria-label="View Georgia Gifts website">
+							<a href="" aria-label="View Georgia Gifts website" rel="nofollow">
 								<img src="images/link-icon-light.svg" alt="" loading="lazy" width="25px" height="25px">
 							</a>
-							<a href="" aria-label="View Georgia Gifts Github">
+							<a href="" aria-label="View Georgia Gifts Github" rel="nofollow">
 								<img src="images/github-logo-light.svg" alt="" loading="lazy" width="25.633px" height="25px">
 							</a>
 						</div>
@@ -139,10 +144,10 @@
 						<img src="images/ptc-bmx-logo.png" alt="Peachtree City BMX logo" loading="lazy" width="222.48px" height="43.25px">
 						<p>Sports Website</p>
 						<div class="additionalProjectsSection_icons">
-							<a href="" aria-label="View Peachtree City BMX  website">
+							<a href="" aria-label="View Peachtree City BMX  website" rel="nofollow">
 								<img src="images/link-icon-light.svg" alt="" loading="lazy" width="25px" height="25px">
 							</a>
-							<a href="" aria-label="View Peachtree City BMX Github">
+							<a href="" aria-label="View Peachtree City BMX Github" rel="nofollow">
 								<img src="images/github-logo-light.svg" alt="" loading="lazy" width="25.633px" height="25px">
 							</a>
 						</div>
@@ -183,25 +188,25 @@
 		</div>
 		<form action="" class="sayHelloForm">
 			<label for="name">Your' Name</label>
-			<input type="text" name="name" id="name">
+			<input type="text" name="name" id="name" required>
 			<label for="email">Your' Email</label>
-			<input type="email" name="email" id="email">
+			<input type="email" name="email" id="email" required>
 			<label for="topic">The Topic</label>
-			<input type="text" name="topic" id="topic">
+			<input type="text" name="topic" id="topic" required>
 			<label for="message">Your' Message</label>
-			<textarea name="message" id="message" cols="30" rows="10"></textarea>
+			<textarea name="message" id="message" cols="30" rows="10" required></textarea>
 			<input type="submit" value="Send Message">
 		</form>
 	</main>
 	<footer>
 		<div class="accentSectionClipped footerIcons">
-			<a href="https://github.com/transformerjnm/" aria-label="View Jacob's Github">
+			<a href="https://github.com/transformerjnm/" aria-label="View Jacob's Github" rel="nofollow">
 				<img src="images/github-logo-dark.svg" alt="" loading="lazy" width="50px" height="50px">
 			</a>
-			<a href="https://www.linkedin.com/in/jacob-mitchell157/" aria-label="View Jacob's Linked In">
+			<a href="https://www.linkedin.com/in/jacob-mitchell157/" aria-label="View Jacob's Linked In" rel="nofollow">
 				<img src="images/linked-in-logo-dark.svg" alt="" loading="lazy"  height="50px">
 			</a>
-			<a href="mailto:jacob.mitchell157@gmail.com" aria-label="Send Jacob a Email">
+			<a href="mailto:jacob.mitchell157@gmail.com" aria-label="Send Jacob a Email" rel="nofollow">
 				<img src="images/email-envelope-dark.svg" alt="" loading="lazy"  height="50px">
 			</a>
 		</div>
@@ -212,7 +217,7 @@
 			</div>
 			<div class="l-grid">
 				<div class="l-grid_TwoCol1">
-					<a href="https://fontawesome.com/license">Font Awesome License</a>
+					<a href="https://fontawesome.com/license" rel="nofollow">Font Awesome License</a>
 				</div>
 				<div class="l-grid_TwoCol2">
 					<span>&copy; 2019 - 2022 Jacob Mitchell</span>

@@ -36,13 +36,16 @@ label,
 
 h1 {
   font-size: 2.44rem;
-  margin: 1rem 0;
+  margin-bottom: 0;
+  margin-top: 1.953rem;
 }
 
 h2 {
   font-size: 1.953rem;
   font-weight: normal;
   margin-top: 0;
+  margin-top: 1.56rem;
+  margin-bottom: 0.8rem;
 }
 
 h1,
@@ -56,6 +59,8 @@ h5,
 h6 {
   font-size: 1.56rem;
   margin: 1.953rem auto 1rem auto;
+  margin-top: 1.56rem;
+  margin-bottom: 0.8rem;
 }
 
 label {
@@ -90,13 +95,12 @@ textarea {
 button,
 .button,
 input[type="submit"] {
-  background-color: transparent;
+  background-color: #fff;
   border: 2px solid #ee7e12;
   border-radius: 15px;
   padding: 0.25rem 0.5rem;
   text-decoration: none;
   text-align: center;
-  background-color: #f6f6f6;
   cursor: pointer;
 }
 
@@ -197,6 +201,10 @@ input[type="submit"]:focus {
   padding: 3rem 1rem calc(3rem + 6rem) 1rem;
 }
 
+.skillsSection {
+  margin-bottom: 3rem;
+}
+
 .skillsSection .l-grid_ThreeCol1 {
   order: 3;
 }
@@ -224,11 +232,6 @@ input[type="submit"]:focus {
   display: block;
 }
 
-.skillsSection .skillsSection_skillCard h3 {
-  margin-top: 1.56rem;
-  margin-bottom: 0.8rem;
-}
-
 .skillsSection .skillsSection_skillCard ul {
   padding-left: 0;
   margin: 0;
@@ -254,7 +257,11 @@ input[type="submit"]:focus {
 }
 
 .projectsSection {
-  margin: 3rem 1rem;
+  padding: 1rem;
+}
+
+.projectsSection:nth-child(2) {
+  margin-bottom: -67px;
 }
 
 .projectsSection .projectsSection_contentBackground {
@@ -266,12 +273,22 @@ input[type="submit"]:focus {
 }
 
 .projectsSection .projectSection_button {
-  margin: 3rem auto;
+  margin: 0 auto;
   display: block;
 }
 
-.projectsSection .l-grid_TwoCol1.gitChainBackgroundContainer_gitChainBackground {
-  order: 2;
+.projectsSection .projectSection_card {
+  backdrop-filter: blur(2px) saturate(180%);
+  -webkit-backdrop-filter: blur(2px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  min-height: 150px;
+  margin: 1rem;
+}
+
+.projectsSection .projectSection_card img {
+  display: block;
+  margin: auto;
 }
 
 .additionalProjectsSection .additionalProjectsSection_card {
@@ -335,7 +352,7 @@ input[type="submit"]:focus {
   -webkit-backdrop-filter: blur(2px) saturate(180%);
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 15px;
-  margin: 3rem 1rem;
+  margin: 1.56rem 1rem 3rem 1rem;
   padding: 1.56rem;
 }
 
@@ -373,7 +390,8 @@ footer .footerIcons img {
   margin: 0.8rem auto;
 }
 
-footer .footerIcons img:hover, footer .footerIcons img:focus {
+footer .footerIcons a:hover,
+footer .footerIcons a:focus {
   transform: scale(1.1);
 }
 
