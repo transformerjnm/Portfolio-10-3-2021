@@ -67,6 +67,16 @@ label {
   font-size: 1.25rem;
 }
 
+input:focus,
+textarea:focus {
+  outline: 2px solid #ee7e12;
+}
+
+input:focus:required:invalid,
+textarea:focus:required:invalid {
+  outline: 2px solid #cc0000;
+}
+
 p,
 span,
 ul li,
@@ -373,6 +383,11 @@ input[type="submit"]:focus {
 
 .sayHelloForm input[type="submit"] {
   margin-top: 1.56rem;
+}
+
+.sayHelloForm .sayHelloForm_error {
+  display: block;
+  min-height: 1rem;
 }
 
 .container {

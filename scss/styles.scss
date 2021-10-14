@@ -220,6 +220,10 @@ Modifier: __*
 	input[type="submit"] {
 		margin-top: $spacingThree;
 	}
+	.sayHelloForm_error {
+		display: block;
+		min-height: $fontFive;
+	}
 }
 .container {
 	margin: auto $containerSpacing;
