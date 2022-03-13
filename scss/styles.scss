@@ -17,6 +17,9 @@ Modifier: __*
 	&.h-flex_verticalCenter {
 		justify-content: center;
 	}
+	&.h-flex__grow {
+		flex-grow: 1;
+	}
 }
 /** layout classes **/
 .l-positionAbsolute {
@@ -64,6 +67,11 @@ Modifier: __*
 	border-radius: 50%;
 	margin: $sectionVerticalSpacing auto $spacingSix auto;
 	display: block;
+}
+// class injected by particles js
+.particles-js-canvas-el {
+	position: absolute;
+	z-index: -1;
 }
 .accentSectionClipped {
 	@include sectionTopClipPath;
@@ -137,8 +145,9 @@ Modifier: __*
 		margin-bottom: -67px;
 	}
 	.projectsSection_contentBackground {
-		@include glassBackground;
+		@include glassBackground(true);
 		padding: $spacingFive;
+		margin: $spacingFive;
 	}
 	.projectSection_button {
 		margin: 0 auto;
@@ -151,28 +160,6 @@ Modifier: __*
 		img {
 			display: block;
 			margin: auto;
-		}
-	}
-}
-.additionalProjectsSection {
-	.additionalProjectsSection_card {
-		background-color: $lightBaseColor;
-		margin: $spacingFive $containerSpacing;
-		border-radius: $borderRadius;
-		padding: $spacingThree $spacingTwo;
-		img {
-			margin: auto;
-			display: block;
-		}
-		p {
-			text-align: center;
-		}
-	}
-	.additionalProjectsSection_icons {
-		display: flex;
-		justify-content: space-around;
-		img {
-			display: inline;
 		}
 	}
 }

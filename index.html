@@ -11,11 +11,13 @@
 </head>
 
 <body>
-	<a class="button resumeRightButton" href="https://jacobportfolio.com/JacobMitchellResume.pdf">Resume</a>
-	<header class="heroHeader h-flex h-flex_verticalCenter h-flex__column">		
-		<h1>Front End Developer &amp; Code Enthusiast</h1>
-		<h2>Developing Accessible web applications</h2>
-		<img class="headshotImage" src="images/jacob-mitchell-headshot.png" alt="" aria-hidden="true" loading="eager" width="150px" height="150px">	
+	<header id="particles-js" class="heroHeader h-flex h-flex__column">	
+		<a class="button resumeRightButton" href="https://jacobportfolio.com/JacobMitchellResume.pdf">Resume</a>
+		<div class="h-flex h-flex__column h-flex_verticalCenter h-flex__grow">
+			<h1>Front End Developer &amp; Code Enthusiast</h1>
+			<h2>Developing Accessible web applications</h2>
+			<img class="headshotImage" src="images/jacob-mitchell-headshot.png" alt="" aria-hidden="true" loading="eager" width="150px" height="150px">	
+		</div>
 	</header>
 	<main>
 		<section class="accentSectionClipped accentSectionClipped__overlapSpacing">		
@@ -103,58 +105,11 @@
 
 				</div>
 				<div class="l-grid_TwoCol2">
-					<!-- TODO add aria for triggering opening.check requirements for focus state-->
-					<button class="projectSection_button" aria-expanded="false">See more projects</button>
+				 <!-- TODO Idk if I need this grid anymore -->
 				</div>
 			</div>
 		</div>		
 		
-		<section class="additionalProjectsSection">
-			<div class="l-grid">
-				<div class="l-grid_ThreeCol1">
-					<div class="additionalProjectsSection_card">
-						<img src="images/unanimity-large-logo.png" alt="Unanimity's logo" loading="lazy" width="222.483px" height="57.75px">
-						<p>A instant messenger</p>
-						<div class="additionalProjectsSection_icons">
-							<a href="https://unanimity.herokuapp.com/" aria-label="View Unanimity instant messenger website"  rel="nofollow">
-								<img src="images/link-icon-light.svg" alt="" loading="lazy" width="25px" height="25px">
-							</a>
-							<a href="https://github.com/Blaine137/unanimityFIREBASE" aria-label="View Unanimity Instant messenger Github"  rel="nofollow">
-								<img src="images/github-logo-light.svg" alt="" loading="lazy" width="25.633px" height="25px">
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="l-grid_ThreeCol2">
-					<div class="additionalProjectsSection_card">
-						<img src="images/georgia-gifts-logo.png" alt="Georgia Gifts' logo" loading="lazy" width="60.133px" height="60px">
-						<p>Personalized gifts</p>
-						<div class="additionalProjectsSection_icons">
-							<a href="https://georgia-gifts.herokuapp.com/" aria-label="View Georgia Gifts website" rel="nofollow">
-								<img src="images/link-icon-light.svg" alt="" loading="lazy" width="25px" height="25px">
-							</a>
-							<a href="https://github.com/transformerjnm/Gerogia-Gifts-MERN" aria-label="View Georgia Gifts Github" rel="nofollow">
-								<img src="images/github-logo-light.svg" alt="" loading="lazy" width="25.633px" height="25px">
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="l-grid_ThreeCol3">
-					<div class="additionalProjectsSection_card">
-						<img src="images/ptc-bmx-logo.png" alt="Peachtree City BMX logo" loading="lazy" width="222.48px" height="43.25px">
-						<p>Sports Website</p>
-						<div class="additionalProjectsSection_icons">
-							<a href="https://jacobportfolio.com/portfolio/ptc-bmx/" aria-label="View Peachtree City BMX  website" rel="nofollow">
-								<img src="images/link-icon-light.svg" alt="" loading="lazy" width="25px" height="25px">
-							</a>
-							<a href="https://github.com/transformerjnm/PTC-BMX" aria-label="View Peachtree City BMX Github" rel="nofollow">
-								<img src="images/github-logo-light.svg" alt="" loading="lazy" width="25.633px" height="25px">
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
 		<section class="companiesWorked">
 			<h4>Awesome companies I've worked for</h4>
 			<div class="companiesWorked_logos">
@@ -188,20 +143,20 @@
 		</div>
 		<form action="" class="sayHelloForm">
 			<label for="name">Your' Name</label>
-			<input type="text" name="name" id="name" required>
+			<input type="text" name="name" pattern="[A-Za-z ]+" id="name" onfocus="sayHelloFormValidation(this)" onKeydown="sayHelloFormValidation(this)" required>
 			<span id="nameError" class="sayHelloForm_error"></span>
 
 			<label for="email">Your' Email</label>
-			<input type="email" name="email" id="email" required>
-			<span id="nameError" class="sayHelloForm_error"></span>
+			<input type="email" name="email" id="email" onfocus="sayHelloFormValidation(this)" onKeydown="sayHelloFormValidation(this)" required>
+			<span id="emailError" class="sayHelloForm_error"></span>
 
 			<label for="topic">The Topic</label>
-			<input type="text" name="topic" id="topic" required>
-			<span id="nameError" class="sayHelloForm_error"></span>
+			<input type="text" name="topic" id="topic" pattern="[A-Za-z0-9 ]+" onfocus="sayHelloFormValidation(this)" onKeydown="sayHelloFormValidation(this)" required>
+			<span id="topicError" class="sayHelloForm_error"></span>
 
 			<label for="message">Your' Message</label>
-			<textarea name="message" id="message" cols="30" rows="10" required></textarea>
-			<span id="nameError" class="sayHelloForm_error"></span>
+			<textarea name="message" id="message" cols="30" rows="10" onfocus="sayHelloFormValidation(this)" onKeydown="sayHelloFormValidation(this)" required></textarea>
+			<span id="messageError" class="sayHelloForm_error"></span>
 
 			<input type="submit" value="Send Message">
 		</form>
@@ -233,6 +188,7 @@
 			</div>
 		</div>
 	</footer>
+	<script type="text/javascript" src="js/particles.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 

@@ -6,8 +6,9 @@ $borderColor: #cccccc; // grey
 $accentColor: #ee7e12; // orange
 $secondaryAccentColor: #6c63ff; // purple
 $primaryTextColor: #0b0e0e; // soft black
-$secondaryTextColor: #3f3d56ff; // off black
+$secondaryTextColor: #3f3d56; // off black
 $glassUIColor: rgba(255, 255, 255, 0.8);
+$glassUIColorSolid: rgba(255, 255, 255, 1);
 $errorColor: #cc0000;
 
 // Font-sizes Major Third
@@ -95,12 +96,16 @@ $borderRadiusButton: 15px;
 		0 100%
 	);
 }
-@mixin glassBackground {
-	backdrop-filter: blur(2px) saturate(180%);
-	-webkit-backdrop-filter: blur(2px) saturate(180%);
+@mixin glassBackground($isSolidBackground: false) {
+	backdrop-filter: blur(2px) saturate(100%);
+	-webkit-backdrop-filter: blur(2px) saturate(100%);
 	background-color: $glassUIColor;
 	border-radius: $borderRadius;
+	@if $isSolidBackground {
+		background-color: $glassUIColorSolid;
+	}
 }
+
 /** Global **/
 html {
 	box-sizing: border-box;

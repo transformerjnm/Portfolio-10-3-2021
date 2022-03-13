@@ -82,7 +82,7 @@ span,
 ul li,
 h2,
 input {
-  color: #3f3d56ff;
+  color: #3f3d56;
 }
 
 p,
@@ -142,6 +142,10 @@ input[type="submit"]:focus {
   justify-content: center;
 }
 
+.h-flex.h-flex__grow {
+  flex-grow: 1;
+}
+
 /** layout classes **/
 .l-positionAbsolute {
   position: absolute;
@@ -186,6 +190,11 @@ input[type="submit"]:focus {
   border-radius: 50%;
   margin: 3rem auto 0.8rem auto;
   display: block;
+}
+
+.particles-js-canvas-el {
+  position: absolute;
+  z-index: -1;
 }
 
 .accentSectionClipped {
@@ -275,11 +284,13 @@ input[type="submit"]:focus {
 }
 
 .projectsSection .projectsSection_contentBackground {
-  backdrop-filter: blur(2px) saturate(180%);
-  -webkit-backdrop-filter: blur(2px) saturate(180%);
+  backdrop-filter: blur(2px) saturate(100%);
+  -webkit-backdrop-filter: blur(2px) saturate(100%);
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 15px;
+  background-color: white;
   padding: 1rem;
+  margin: 1rem;
 }
 
 .projectsSection .projectSection_button {
@@ -288,8 +299,8 @@ input[type="submit"]:focus {
 }
 
 .projectsSection .projectSection_card {
-  backdrop-filter: blur(2px) saturate(180%);
-  -webkit-backdrop-filter: blur(2px) saturate(180%);
+  backdrop-filter: blur(2px) saturate(100%);
+  -webkit-backdrop-filter: blur(2px) saturate(100%);
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 15px;
   min-height: 150px;
@@ -299,31 +310,6 @@ input[type="submit"]:focus {
 .projectsSection .projectSection_card img {
   display: block;
   margin: auto;
-}
-
-.additionalProjectsSection .additionalProjectsSection_card {
-  background-color: #fff;
-  margin: 1rem 1rem;
-  border-radius: 15px;
-  padding: 1.56rem 1.953rem;
-}
-
-.additionalProjectsSection .additionalProjectsSection_card img {
-  margin: auto;
-  display: block;
-}
-
-.additionalProjectsSection .additionalProjectsSection_card p {
-  text-align: center;
-}
-
-.additionalProjectsSection .additionalProjectsSection_icons {
-  display: flex;
-  justify-content: space-around;
-}
-
-.additionalProjectsSection .additionalProjectsSection_icons img {
-  display: inline;
 }
 
 .companiesWorked {
@@ -358,8 +344,8 @@ input[type="submit"]:focus {
 }
 
 .sayHelloForm {
-  backdrop-filter: blur(2px) saturate(180%);
-  -webkit-backdrop-filter: blur(2px) saturate(180%);
+  backdrop-filter: blur(2px) saturate(100%);
+  -webkit-backdrop-filter: blur(2px) saturate(100%);
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 15px;
   margin: 1.56rem 1rem 3rem 1rem;
@@ -411,7 +397,7 @@ footer .footerIcons a:focus {
 }
 
 footer .footerDark {
-  background-color: #3f3d56ff;
+  background-color: #3f3d56;
   text-align: center;
   padding: 3rem 1rem 1rem 1rem;
 }
