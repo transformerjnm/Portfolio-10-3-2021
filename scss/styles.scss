@@ -74,20 +74,17 @@ Modifier: __*
 	z-index: -1;
 }
 .accentSectionClipped {
-	@include sectionTopClipPath;
 	background-color: $accentColor;
 	padding: $sectionVerticalSpacing $containerSpacing;
-	p {
-		color: $primaryTextColor;
-	}
 	.robotImage {
 		margin: $sectionVerticalSpacing auto;
 		display: block;
 	}
+	@include sectionTopClipPath;
 }
 .accentSectionClipped__overlapSpacing {
 	margin-bottom: -$sectionOverlapSpacing;
-	padding: $sectionVerticalSpacing $containerSpacing
+	padding: inherit $containerSpacing
 		calc(#{$sectionVerticalSpacing} + #{$sectionOverlapSpacing})
 		$containerSpacing;
 }
@@ -131,10 +128,10 @@ Modifier: __*
 	width: 100vw;
 	.gitChainBackgroundContainer_gitChainBackground {
 		transform: rotate(180deg);
-		background: transparent url("../images/github-commit-chain.svg") repeat-x 0
-			45px;
+		background: transparent url(../images/github-commit-chain.svg) repeat-x 0
+			28px;
 		height: 135px;
-		width: calc(60vw + 30px);
+		width: calc(60vw + 45px);
 	}
 }
 
@@ -147,7 +144,7 @@ Modifier: __*
 	.projectsSection_contentBackground {
 		@include glassBackground(true);
 		padding: $spacingFive;
-		margin: $spacingFive;
+		margin: $spacingFive 0;
 	}
 	.projectSection_button {
 		margin: 0 auto;
@@ -156,7 +153,7 @@ Modifier: __*
 	.projectSection_card {
 		@include glassBackground;
 		min-height: 150px;
-		margin: $spacingFive;
+		margin: $spacingFive 0;
 		img {
 			display: block;
 			margin: auto;

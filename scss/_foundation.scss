@@ -6,7 +6,7 @@ $borderColor: #cccccc; // grey
 $accentColor: #ee7e12; // orange
 $secondaryAccentColor: #6c63ff; // purple
 $primaryTextColor: #0b0e0e; // soft black
-$secondaryTextColor: #3f3d56; // off black
+$secondaryTextColor: #2c2b3d; // off black
 $glassUIColor: rgba(255, 255, 255, 0.8);
 $glassUIColorSolid: rgba(255, 255, 255, 1);
 $errorColor: #cc0000;
@@ -24,7 +24,7 @@ $fontSeven: 0.8rem;
 $desktopMediaQueryWidth: 1200px;
 
 // Spacing for margin/padding
-$containerSpacing: 1rem; //left and right spacing of the page
+$containerSpacing: 2rem; //left and right spacing of the page
 $sectionVerticalSpacing: 3rem; //spacing between each section
 $spacingOne: 2.44rem;
 $spacingTwo: 1.953rem;
@@ -33,7 +33,7 @@ $spacingFour: 1.25rem;
 $spacingFive: 1rem; //browser default
 $spacingSix: 0.8rem;
 //For the section with the clip path and overlapping cards
-$sectionTopClipPathSpacing: 7vw;
+$sectionTopClipPathSpacing: 3vw;
 $sectionOverlapSpacing: 6rem;
 
 // other variables
@@ -95,10 +95,9 @@ $borderRadiusButton: 15px;
 		100% 100%,
 		0 100%
 	);
+	padding-top: $sectionTopClipPathSpacing * 2;
 }
 @mixin glassBackground($isSolidBackground: false) {
-	backdrop-filter: blur(2px) saturate(100%);
-	-webkit-backdrop-filter: blur(2px) saturate(100%);
 	background-color: $glassUIColor;
 	border-radius: $borderRadius;
 	@if $isSolidBackground {
@@ -125,6 +124,7 @@ h3,
 h4,
 h5,
 h6,
+p,
 button,
 label,
 .button {
@@ -166,7 +166,6 @@ input:focus:required:invalid,
 textarea:focus:required:invalid {
 	outline: 2px solid $errorColor;
 }
-p,
 span,
 ul li,
 h2,

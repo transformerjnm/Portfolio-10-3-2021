@@ -28,6 +28,7 @@ h3,
 h4,
 h5,
 h6,
+p,
 button,
 label,
 .button {
@@ -77,12 +78,11 @@ textarea:focus:required:invalid {
   outline: 2px solid #cc0000;
 }
 
-p,
 span,
 ul li,
 h2,
 input {
-  color: #3f3d56;
+  color: #2c2b3d;
 }
 
 p,
@@ -176,14 +176,14 @@ input[type="submit"]:focus {
 
 /** Page Order **/
 .heroHeader {
-  margin: 0 1rem;
-  min-height: calc( 100vh - (7vw + 3rem));
+  margin: 0 2rem;
+  min-height: calc( 100vh - (3vw + 3rem));
 }
 
 .resumeRightButton {
   width: 100px;
   display: block;
-  margin: 1rem 0.8rem 0 auto;
+  margin: 2rem 0.8rem 0 auto;
 }
 
 .headshotImage {
@@ -198,16 +198,13 @@ input[type="submit"]:focus {
 }
 
 .accentSectionClipped {
-  -moz-clip-path: polygon(0 0, 50% 7vw, 100% 0%, 100% 100%, 0 100%);
-  -ms-clip-path: polygon(0 0, 50% 7vw, 100% 0%, 100% 100%, 0 100%);
-  -o-clip-path: polygon(0 0, 50% 7vw, 100% 0%, 100% 100%, 0 100%);
-  clip-path: polygon(0 0, 50% 7vw, 100% 0%, 100% 100%, 0 100%);
   background-color: #ee7e12;
-  padding: 3rem 1rem;
-}
-
-.accentSectionClipped p {
-  color: #0b0e0e;
+  padding: 3rem 2rem;
+  -moz-clip-path: polygon(0 0, 50% 3vw, 100% 0%, 100% 100%, 0 100%);
+  -ms-clip-path: polygon(0 0, 50% 3vw, 100% 0%, 100% 100%, 0 100%);
+  -o-clip-path: polygon(0 0, 50% 3vw, 100% 0%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 50% 3vw, 100% 0%, 100% 100%, 0 100%);
+  padding-top: 6vw;
 }
 
 .accentSectionClipped .robotImage {
@@ -217,7 +214,7 @@ input[type="submit"]:focus {
 
 .accentSectionClipped__overlapSpacing {
   margin-bottom: -6rem;
-  padding: 3rem 1rem calc(3rem + 6rem) 1rem;
+  padding: inherit 2rem calc(3rem + 6rem) 2rem;
 }
 
 .skillsSection {
@@ -237,7 +234,7 @@ input[type="submit"]:focus {
   background-color: #fff;
   z-index: 3;
   position: relative;
-  margin: 1rem 1rem;
+  margin: 1rem 2rem;
   border-radius: 15px;
   padding: 1.56rem 1.953rem;
 }
@@ -270,13 +267,13 @@ input[type="submit"]:focus {
 
 .gitChainBackgroundContainer .gitChainBackgroundContainer_gitChainBackground {
   transform: rotate(180deg);
-  background: transparent url("../images/github-commit-chain.svg") repeat-x 0 45px;
+  background: transparent url(../images/github-commit-chain.svg) repeat-x 0 28px;
   height: 135px;
-  width: calc(60vw + 30px);
+  width: calc(60vw + 45px);
 }
 
 .projectsSection {
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .projectsSection:nth-child(2) {
@@ -284,13 +281,11 @@ input[type="submit"]:focus {
 }
 
 .projectsSection .projectsSection_contentBackground {
-  backdrop-filter: blur(2px) saturate(100%);
-  -webkit-backdrop-filter: blur(2px) saturate(100%);
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 15px;
   background-color: white;
   padding: 1rem;
-  margin: 1rem;
+  margin: 1rem 0;
 }
 
 .projectsSection .projectSection_button {
@@ -299,12 +294,10 @@ input[type="submit"]:focus {
 }
 
 .projectsSection .projectSection_card {
-  backdrop-filter: blur(2px) saturate(100%);
-  -webkit-backdrop-filter: blur(2px) saturate(100%);
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 15px;
   min-height: 150px;
-  margin: 1rem;
+  margin: 1rem 0;
 }
 
 .projectsSection .projectSection_card img {
@@ -313,7 +306,7 @@ input[type="submit"]:focus {
 }
 
 .companiesWorked {
-  margin: 3rem 1rem;
+  margin: 3rem 2rem;
 }
 
 .companiesWorked .companiesWorked_logos {
@@ -323,7 +316,7 @@ input[type="submit"]:focus {
 }
 
 .myKnowledge {
-  margin: 3rem 1rem;
+  margin: 3rem 2rem;
 }
 
 .myKnowledge ul {
@@ -344,11 +337,9 @@ input[type="submit"]:focus {
 }
 
 .sayHelloForm {
-  backdrop-filter: blur(2px) saturate(100%);
-  -webkit-backdrop-filter: blur(2px) saturate(100%);
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 15px;
-  margin: 1.56rem 1rem 3rem 1rem;
+  margin: 1.56rem 2rem 3rem 2rem;
   padding: 1.56rem;
 }
 
@@ -377,7 +368,7 @@ input[type="submit"]:focus {
 }
 
 .container {
-  margin: auto 1rem;
+  margin: auto 2rem;
 }
 
 footer .footerIcons {
@@ -397,9 +388,9 @@ footer .footerIcons a:focus {
 }
 
 footer .footerDark {
-  background-color: #3f3d56;
+  background-color: #2c2b3d;
   text-align: center;
-  padding: 3rem 1rem 1rem 1rem;
+  padding: 3rem 2rem 1rem 2rem;
 }
 
 footer .footerDark span {
