@@ -17,11 +17,9 @@ $fontOne: 2.44rem;
 $fontTwo: 1.953rem;
 $fontThree: 1.56rem;
 $fontFour: 1.25rem;
-$fontFive: 1rem; //browser default
+$fontFive: 1rem; 
 $fontSix: 0.9rem;
 $fontSeven: 0.8rem;
-
-$desktopMediaQueryWidth: 1200px;
 
 // Spacing for margin/padding
 $containerSpacing: 2rem; //left and right spacing of the page
@@ -30,7 +28,7 @@ $spacingOne: 2.44rem;
 $spacingTwo: 1.953rem;
 $spacingThree: 1.56rem;
 $spacingFour: 1.25rem;
-$spacingFive: 1rem; //browser default
+$spacingFive: 1rem;
 $spacingSix: 0.8rem;
 //For the section with the clip path and overlapping cards
 $sectionTopClipPathSpacing: 3vw;
@@ -40,23 +38,25 @@ $sectionOverlapSpacing: 6rem;
 $borderRadius: 15px;
 $borderRadiusButton: 15px;
 
-@media only screen and (min-width: $desktopMediaQueryWidth) {
-	//desktop
-	$FontOne: 3.052rem;
-	$dFontTwo: 2.44rem;
-	$FontThree: 1.953rem;
-	$FontFour: 1.56rem;
-	$FontFive: 1.25rem;
-	$FontSix: 1rem; //browser default
-	$FontSeven: 0.8rem;
+//desktop
+$desktopMediaQueryWidth: 1200px;
 
-	$spacingOne: 3.052rem;
-	$spacingTwo: 2.44rem;
-	$spacingThree: 1.953rem;
-	$spacingFour: 1.56rem;
-	$spacingFive: 1.25rem;
-	$spacingSix: 1rem;
-}
+$fontOneDesktop: 3.052rem;
+$fontTwoDesktop: 2.44rem;
+$fontThreeDesktop: 1.953rem;
+$fontFourDesktop: 1.56rem;
+$fontFiveDesktop: 1.25rem;
+$fontSixDesktop: 1rem;
+$fontSevenDesktop: 0.8rem;
+
+$containerSpacingDesktop: 4rem;
+$spacingOneDesktop: 3.052rem;
+$spacingTwoDesktop: 2.44rem;
+$spacingThreeDesktop: 1.953rem;
+$spacingFourDesktop: 1.56rem;
+$spacingFiveDesktop: 1.25rem;
+$spacingSixDesktop: 1rem;
+
 
 // Mixins
 @mixin sectionTopClipPath {
@@ -210,4 +210,43 @@ button:focus,
 .button:focus,
 input[type="submit"]:focus {
 	transform: scale(1.05);
+}
+
+@media only screen and (min-width: $desktopMediaQueryWidth) {
+	/** Global **/
+	h1 {
+		font-size: $fontOneDesktop;
+		margin-top: $spacingTwoDesktop;
+	}
+	h2 {
+		font-size: $fontTwoDesktop;
+		margin-top: $spacingThreeDesktop;
+		margin-bottom: $spacingSixDesktop;
+	}
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-size: $fontThreeDesktop;
+		margin: $spacingTwoDesktop auto $spacingFiveDesktop auto;
+		margin-top: $spacingThreeDesktop;
+		margin-bottom: $spacingSixDesktop;
+	}
+	label {
+		font-size: $fontFourDesktop;
+	}
+	p,
+	span,
+	ul li,
+	button,
+	.button,
+	input,
+	textarea,
+	a {
+		font-size: $fontFiveDesktop;
+	}
+	input,
+	textarea {
+		min-height: $fontTwoDesktop;
+	}
 }

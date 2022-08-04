@@ -7,15 +7,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet preload" type="text/css" href="css/styles.css" />
 	<title>Jacob's Portfolio</title>
+	<!-- TODO: favicon. put favicon in root directory of site. some old browsers may look for it there -->
+	<link rel="icon" type="image/png" href="/favicon.png"/>
+	<!-- TODO: description. should match H1  -->
 	<meta name="description" content="" />
 </head>
-
 <body>
+	<!-- TODO: add a button to be able to stop background animation -->
 	<header id="particles-js" class="heroHeader h-flex h-flex__column">	
 		<a class="button resumeRightButton" href="https://jacobportfolio.com/JacobMitchellResume.pdf">Resume</a>
 		<div class="h-flex h-flex__column h-flex_verticalCenter h-flex__grow">
 			<h1>Front End Developer &amp; Code Enthusiast</h1>
 			<h2>Developing Accessible web applications</h2>
+			<!-- TODO: update this image to next gen format and correct size -->
 			<img class="headshotImage" src="images/jacob-mitchell-headshot.png" alt="" aria-hidden="true" loading="eager" width="150px" height="150px">	
 		</div>
 	</header>
@@ -46,20 +50,19 @@
 							<ul>
 								<li>HTML</li>
 								<li>CSS, SCSS</li>
-								<li>Javascript</li>
+								<li>Javascript, JQuery</li>
 								<li>FTL</li>
 							</ul>
 							<h3>Add Ons</h3>
 							<ul>
 								<li>React</li>
-								<li>Redux</li>
 								<li>Gulp</li>
 								<li>Bootstrap CSS</li>
 								<li>Materialize CSS</li>
 							</ul>
 							<h3>Others</h3>
 							<ul>
-								<li>Node, Npm, SQL, MongoDb, Express</li>
+								<li>Node, NPM, NVM</li>
 							</ul>
 						</div>				
 					</div>
@@ -68,9 +71,9 @@
 							<img src="images/toolbox-solid.svg" alt="" loading="lazy" aria-hidden="true" width="50" height="43.7">
 							<h3>Tool Kit</h3>
 							<ul>
-								<li>Vs Code</li>
-								<li>Liferay(CMS)</li>
-								<li>InVision - dev</li>
+								<li>VS Code</li>
+								<li>Liferay(CMS), AEM</li>
+								<li>InVision</li>
 								<li>Jira</li>
 								<li>Github, Git</li>
 								<li>Bitbucket</li>
@@ -97,6 +100,8 @@
 						</ul>
 					</div>
 				</div>
+				<!-- TODO: Add Twitter Project  -->
+
 			</div>
 		</div>
 
@@ -154,15 +159,16 @@
 			<textarea name="message" id="message" cols="30" rows="10" onfocus="sayHelloFormValidation(this)" onKeydown="sayHelloFormValidation(this)" required></textarea>
 			<span id="messageError" class="sayHelloForm_error"></span>
 
+			<!-- TODO: update button styes to have more distinguished focus state  -->
 			<input type="submit" value="Send Message">
 		</form>
 	</main>
 	<footer>
 		<div class="accentSectionClipped footerIcons">
-			<a href="https://github.com/transformerjnm/" aria-label="View Jacob's Github" rel="nofollow">
+			<a href="https://github.com/transformerjnm/" aria-label="View Jacob's Github Profile" rel="nofollow">
 				<img src="images/github-logo-dark.svg" alt="" loading="lazy" width="50px" height="50px">
 			</a>
-			<a href="https://www.linkedin.com/in/jacob-mitchell157/" aria-label="View Jacob's Linked In" rel="nofollow">
+			<a href="https://www.linkedin.com/in/jacob-mitchell157/" aria-label="View Jacob's Linked In Profile" rel="nofollow">
 				<img src="images/linked-in-logo-dark.svg" alt="" loading="lazy"  height="50px">
 			</a>
 			<a href="mailto:jacob.mitchell157@gmail.com" aria-label="Send Jacob a Email" rel="nofollow">

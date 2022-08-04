@@ -104,7 +104,7 @@ textarea {
 
 button,
 .button,
-input[type="submit"] {
+input[type=submit] {
   background-color: #fff;
   border: 2px solid #ee7e12;
   border-radius: 15px;
@@ -118,30 +118,65 @@ button:hover,
 button:focus,
 .button:hover,
 .button:focus,
-input[type="submit"]:hover,
-input[type="submit"]:focus {
+input[type=submit]:hover,
+input[type=submit]:focus {
   outline: 1px solid #ee7e12;
 }
 
 button:focus,
 .button:focus,
-input[type="submit"]:focus {
+input[type=submit]:focus {
   transform: scale(1.05);
 }
 
+@media only screen and (min-width: 1200px) {
+  /** Global **/
+  h1 {
+    font-size: 3.052rem;
+    margin-top: 2.44rem;
+  }
+  h2 {
+    font-size: 2.44rem;
+    margin-top: 1.953rem;
+    margin-bottom: 1rem;
+  }
+  h3,
+h4,
+h5,
+h6 {
+    font-size: 1.953rem;
+    margin: 2.44rem auto 1.25rem auto;
+    margin-top: 1.953rem;
+    margin-bottom: 1rem;
+  }
+  label {
+    font-size: 1.56rem;
+  }
+  p,
+span,
+ul li,
+button,
+.button,
+input,
+textarea,
+a {
+    font-size: 1.25rem;
+  }
+  input,
+textarea {
+    min-height: 2.44rem;
+  }
+}
 /** Helper Classes **/
 .h-flex {
   display: flex;
 }
-
 .h-flex.h-flex__column {
   flex-direction: column;
 }
-
 .h-flex.h-flex_verticalCenter {
   justify-content: center;
 }
-
 .h-flex.h-flex__grow {
   flex-grow: 1;
 }
@@ -150,7 +185,6 @@ input[type="submit"]:focus {
 .l-positionAbsolute {
   position: absolute;
 }
-
 .l-positionAbsolute .l-positionAbsolute_centerVerticalPosition {
   position: relative;
   top: 50%;
@@ -158,12 +192,15 @@ input[type="submit"]:focus {
 }
 
 .l-grid {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 0 1fr 0 1fr 0 1fr 0 1fr 0 1fr 0 1fr 0 1fr 0 1fr 0 1fr 0 1fr;
   grid-template-columns: repeat(11, 1fr);
+  -webkit-column-gap: 0;
+  -moz-column-gap: 0;
   column-gap: 0;
   /** Two column grid **/
 }
-
 .l-grid .l-grid_TwoCol1,
 .l-grid .l-grid_TwoCol2,
 .l-grid .l-grid_ThreeCol1,
@@ -177,7 +214,7 @@ input[type="submit"]:focus {
 /** Page Order **/
 .heroHeader {
   margin: 0 2rem;
-  min-height: calc( 100vh - (3vw + 3rem));
+  min-height: calc(100vh - (3vw + 3rem));
 }
 
 .resumeRightButton {
@@ -200,13 +237,13 @@ input[type="submit"]:focus {
 .accentSectionClipped {
   background-color: #ee7e12;
   padding: 3rem 2rem;
+  -webkit-clip-path: polygon(0 0, 50% 3vw, 100% 0%, 100% 100%, 0 100%);
   -moz-clip-path: polygon(0 0, 50% 3vw, 100% 0%, 100% 100%, 0 100%);
   -ms-clip-path: polygon(0 0, 50% 3vw, 100% 0%, 100% 100%, 0 100%);
   -o-clip-path: polygon(0 0, 50% 3vw, 100% 0%, 100% 100%, 0 100%);
   clip-path: polygon(0 0, 50% 3vw, 100% 0%, 100% 100%, 0 100%);
   padding-top: 6vw;
 }
-
 .accentSectionClipped .robotImage {
   margin: 3rem auto;
   display: block;
@@ -220,16 +257,13 @@ input[type="submit"]:focus {
 .skillsSection {
   margin-bottom: 3rem;
 }
-
 .skillsSection .l-grid_ThreeCol1 {
   order: 3;
 }
-
 .skillsSection .skillsSection_skillsImage {
   margin: auto;
   display: block;
 }
-
 .skillsSection .skillsSection_skillCard {
   background-color: #fff;
   z-index: 3;
@@ -238,21 +272,17 @@ input[type="submit"]:focus {
   border-radius: 15px;
   padding: 1.56rem 1.953rem;
 }
-
 .skillsSection .skillsSection_skillCard:nth-child(1) {
   margin-top: 0;
 }
-
 .skillsSection .skillsSection_skillCard img {
   margin: auto;
   display: block;
 }
-
 .skillsSection .skillsSection_skillCard ul {
   padding-left: 0;
   margin: 0;
 }
-
 .skillsSection .skillsSection_skillCard ul li {
   list-style: none;
 }
@@ -264,7 +294,6 @@ input[type="submit"]:focus {
 .gitChainBackgroundContainer {
   width: 100vw;
 }
-
 .gitChainBackgroundContainer .gitChainBackgroundContainer_gitChainBackground {
   transform: rotate(180deg);
   background: transparent url(../images/github-commit-chain.svg) repeat-x 0 28px;
@@ -275,31 +304,26 @@ input[type="submit"]:focus {
 .projectsSection {
   padding: 2rem;
 }
-
 .projectsSection:nth-child(2) {
   margin-bottom: -67px;
 }
-
 .projectsSection .projectsSection_contentBackground {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 15px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   padding: 1rem;
   margin: 1rem 0;
 }
-
 .projectsSection .projectSection_button {
   margin: 0 auto;
   display: block;
 }
-
 .projectsSection .projectSection_card {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 15px;
   min-height: 150px;
   margin: 1rem 0;
 }
-
 .projectsSection .projectSection_card img {
   display: block;
   margin: auto;
@@ -308,7 +332,6 @@ input[type="submit"]:focus {
 .companiesWorked {
   margin: 3rem 2rem;
 }
-
 .companiesWorked .companiesWorked_logos {
   display: flex;
   align-items: center;
@@ -318,19 +341,15 @@ input[type="submit"]:focus {
 .myKnowledge {
   margin: 3rem 2rem;
 }
-
 .myKnowledge ul {
   padding-left: 0;
 }
-
 .myKnowledge ul:nth-child(1) {
   margin-top: 0;
 }
-
 .myKnowledge ul li {
   list-style: none;
 }
-
 .myKnowledge img {
   margin: 1.56rem auto;
   display: block;
@@ -342,26 +361,21 @@ input[type="submit"]:focus {
   margin: 1.56rem 2rem 3rem 2rem;
   padding: 1.56rem;
 }
-
 .sayHelloForm label {
   display: block;
   margin-top: 1.56rem;
 }
-
 .sayHelloForm label:nth-child(1) {
   margin-top: 0;
 }
-
 .sayHelloForm input,
 .sayHelloForm textarea {
   border-radius: 15px;
   width: 100%;
 }
-
-.sayHelloForm input[type="submit"] {
+.sayHelloForm input[type=submit] {
   margin-top: 1.56rem;
 }
-
 .sayHelloForm .sayHelloForm_error {
   display: block;
   min-height: 1rem;
@@ -377,43 +391,37 @@ footer .footerIcons {
   justify-content: space-around;
   align-items: center;
 }
-
 footer .footerIcons img {
   margin: 0.8rem auto;
 }
-
 footer .footerIcons a:hover,
 footer .footerIcons a:focus {
   transform: scale(1.1);
 }
-
 footer .footerDark {
   background-color: #2c2b3d;
   text-align: center;
   padding: 3rem 2rem 1rem 2rem;
 }
-
 footer .footerDark span {
   display: block;
 }
-
 footer .footerDark a {
   display: inline-block;
 }
-
 footer .footerDark a,
 footer .footerDark a:visited,
 footer .footerDark span {
   color: #fff;
   margin-top: 0.8rem;
 }
-
 footer .footerDark .footerDark__center {
   width: 100%;
   text-align: center;
 }
 
 @media only screen and (min-width: 1200px) {
+  /** layout classes **/
   .l-grid {
     /** Three column grid **/
   }
@@ -442,5 +450,74 @@ footer .footerDark .footerDark__center {
     grid-column-end: 12;
     -ms-grid-column-span: 4;
   }
-}
-/*# sourceMappingURL=styles.css.map */
+  /** Page Order **/
+  .heroHeader {
+    margin: 0 4rem;
+  }
+  .resumeRightButton {
+    margin: 4rem 1rem 0 auto;
+  }
+  .headshotImage {
+    margin: 3rem auto 1rem auto;
+  }
+  .accentSectionClipped {
+    padding: 3rem 4rem;
+    -webkit-clip-path: polygon(0 0, 50% 3vw, 100% 0%, 100% 100%, 0 100%);
+    -moz-clip-path: polygon(0 0, 50% 3vw, 100% 0%, 100% 100%, 0 100%);
+    -ms-clip-path: polygon(0 0, 50% 3vw, 100% 0%, 100% 100%, 0 100%);
+    -o-clip-path: polygon(0 0, 50% 3vw, 100% 0%, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 50% 3vw, 100% 0%, 100% 100%, 0 100%);
+    padding-top: 6vw;
+  }
+  .accentSectionClipped__overlapSpacing {
+    padding: inherit 4rem calc(3rem + 6rem) 4rem;
+  }
+  .skillsSection .skillsSection_skillCard {
+    margin: 1.25rem 4rem;
+    padding: 1.953rem 2.44rem;
+  }
+  .projectsSection {
+    padding: 4rem;
+  }
+  .projectsSection .projectsSection_contentBackground {
+    padding: 1.25rem;
+    margin: 1.25rem 0;
+  }
+  .projectsSection .projectSection_card {
+    margin: 1.25rem 0;
+  }
+  .companiesWorked {
+    margin: 3rem 4rem;
+  }
+  .myKnowledge {
+    margin: 3rem 4rem;
+  }
+  .myKnowledge img {
+    margin: 1.953rem auto;
+  }
+  .sayHelloForm {
+    margin: 1.953rem 4rem 3rem 4rem;
+    padding: 1.953rem;
+  }
+  .sayHelloForm label {
+    margin-top: 1.953rem;
+  }
+  .sayHelloForm input[type=submit] {
+    margin-top: 1.953rem;
+  }
+  .sayHelloForm .sayHelloForm_error {
+    min-height: 1.25rem;
+  }
+  .container {
+    margin: auto 4rem;
+  }
+  footer .footerIcons img {
+    margin: 1rem auto;
+  }
+  footer .footerDark {
+    padding: 3rem 4rem 1.25rem 4rem;
+  }
+  footer .footerDark span {
+    margin-top: 1rem;
+  }
+}/*# sourceMappingURL=styles.css.map */

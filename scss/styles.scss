@@ -250,6 +250,7 @@ footer {
 	}
 }
 @media only screen and (min-width: $desktopMediaQueryWidth) {
+	/** layout classes **/
 	.l-grid {
 		.l-grid_TwoCol1 {
 			grid-column-start: 1;
@@ -278,4 +279,81 @@ footer {
 			-ms-grid-column-span: 4;
 		}
 	}
+
+	/** Page Order **/
+	.heroHeader {
+		margin: 0 $containerSpacingDesktop;
+	}
+	.resumeRightButton {
+		margin: $containerSpacingDesktop $spacingSixDesktop 0 auto;
+	}
+	.headshotImage {
+		margin: $sectionVerticalSpacing auto $spacingSixDesktop auto;
+	}
+	.accentSectionClipped {
+		padding: $sectionVerticalSpacing $containerSpacingDesktop;
+		@include sectionTopClipPath;
+	}
+	.accentSectionClipped__overlapSpacing {
+		padding: inherit $containerSpacingDesktop
+			calc(#{$sectionVerticalSpacing} + #{$sectionOverlapSpacing})
+			$containerSpacingDesktop;
+	}
+	.skillsSection {
+		.skillsSection_skillCard {
+			margin: $spacingFiveDesktop $containerSpacingDesktop;
+			padding: $spacingThreeDesktop $spacingTwoDesktop;
+		}
+	}
+	.projectsSection {
+		padding: $containerSpacingDesktop;
+		.projectsSection_contentBackground {
+			padding: $spacingFiveDesktop;
+			margin: $spacingFiveDesktop 0;
+		}
+		.projectSection_card {
+			margin: $spacingFiveDesktop 0;
+		}
+	}
+	.companiesWorked {
+		margin: $sectionVerticalSpacing $containerSpacingDesktop;
+	}
+	.myKnowledge {
+		margin: $sectionVerticalSpacing $containerSpacingDesktop;
+		img {
+			margin: $spacingThreeDesktop auto;
+		}
+	}
+	.sayHelloForm {
+		margin: $spacingThreeDesktop $containerSpacingDesktop $sectionVerticalSpacing
+		$containerSpacingDesktop;
+		padding: $spacingThreeDesktop;
+		label {
+			margin-top: $spacingThreeDesktop;
+		}
+		input[type="submit"] {
+			margin-top: $spacingThreeDesktop;
+		}
+		.sayHelloForm_error {
+			min-height: $fontFiveDesktop;
+		}
+	}
+	.container {
+		margin: auto $containerSpacingDesktop;
+	}
+	footer {
+		.footerIcons {
+			img {
+				margin: $spacingSixDesktop auto;
+			}
+		}
+		.footerDark {
+			padding: $sectionVerticalSpacing $containerSpacingDesktop $spacingFiveDesktop
+				$containerSpacingDesktop;
+			span {
+				margin-top: $spacingSixDesktop;
+			}
+		}
+	}	
 }
+
