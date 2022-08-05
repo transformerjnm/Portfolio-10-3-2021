@@ -469,12 +469,36 @@ footer .footerDark .footerDark__center {
     clip-path: polygon(0 0, 50% 3vw, 100% 0%, 100% 100%, 0 100%);
     padding-top: 6vw;
   }
+  .accentSectionClipped .l-grid {
+    max-width: 1600px;
+    margin: auto;
+  }
   .accentSectionClipped__overlapSpacing {
     padding: inherit 4rem calc(3rem + 6rem) 4rem;
+  }
+  .skillsSection .skillsSection_skillsImage {
+    margin-top: 6rem;
+    margin-left: calc(20vw - 170px);
   }
   .skillsSection .skillsSection_skillCard {
     margin: 1.25rem 4rem;
     padding: 1.953rem 2.44rem;
+    max-width: 300px;
+  }
+  .skillsSection .l-grid_ThreeCol1 {
+    order: initial;
+  }
+  .skillsSection .l-grid_ThreeCol2 .skillsSection_skillCard {
+    margin-left: auto;
+  }
+  .skillsSection .l-grid_ThreeCol3 .skillsSection_skillCard {
+    margin-right: auto;
+  }
+  .gitChainBackgroundVertical {
+    background: transparent url("../images/github-commit-chain-vertical.svg") repeat-y 20vw 0;
+  }
+  .gitChainBackgroundContainer .gitChainBackgroundContainer_gitChainBackground {
+    width: calc(20vw + 45px);
   }
   .projectsSection {
     padding: 4rem;
