@@ -76,10 +76,14 @@ Modifier: __*
 .accentSectionClipped {
 	background-color: $accentColor;
 	padding: $sectionVerticalSpacing $containerSpacing;
+	.l-grid {
+		margin-bottom: $sectionVerticalSpacing;
+	}
 	.robotImage {
 		margin: $sectionVerticalSpacing auto;
 		display: block;
 	}
+
 	@include sectionTopClipPath;
 }
 .accentSectionClipped__overlapSpacing {
@@ -93,15 +97,19 @@ Modifier: __*
 	.l-grid_ThreeCol1 {
 		order: 3;
 	}
+	.l-grid_ThreeCol2, .l-grid_ThreeCol3 {
+		margin: $spacingFive $containerSpacing;	
+	}
 	.skillsSection_skillsImage {
 		margin: auto;
 		display: block;
 	}
 	.skillsSection_skillCard {
+		margin: auto;
+		max-width: 300px;
 		background-color: $lightBaseColor;
 		z-index: 3;
 		position: relative;
-		margin: $spacingFive $containerSpacing;
 		border-radius: $borderRadius;
 		padding: $spacingThree $spacingTwo;
 		&:nth-child(1) {
@@ -117,7 +125,7 @@ Modifier: __*
 			li {
 				list-style: none;
 			}
-		}
+		}	
 	}
 }
 .gitChainBackgroundVertical {
@@ -136,7 +144,6 @@ Modifier: __*
 }
 
 .projectsSection {
-	//margin: $sectionVerticalSpacing $containerSpacing;
 	padding: $containerSpacing;
 	&:nth-child(2) {
 		margin-bottom: -67px;
@@ -184,10 +191,13 @@ Modifier: __*
 		display: block;
 	}
 }
+.contactMe {
+	margin: $spacingThree $containerSpacing $sectionVerticalSpacing
+	$containerSpacing;
+}
 .sayHelloForm {
 	@include glassBackground;
-	margin: $spacingThree $containerSpacing $sectionVerticalSpacing
-		$containerSpacing;
+	
 	padding: $spacingThree;
 	label {
 		&:nth-child(1) {
@@ -209,9 +219,7 @@ Modifier: __*
 		min-height: $fontFive;
 	}
 }
-.container {
-	margin: auto $containerSpacing;
-}
+
 footer {
 	.footerIcons {
 		display: flex;
@@ -279,7 +287,11 @@ footer {
 			-ms-grid-column-span: 4;
 		}
 	}
-
+	/** helper **/
+	.h-containerWidth {
+		max-width: 1600px;
+		margin: auto;
+	}
 	/** Page Order **/
 	.heroHeader {
 		margin: 0 $containerSpacingDesktop;
@@ -293,10 +305,6 @@ footer {
 	.accentSectionClipped {
 		padding: $sectionVerticalSpacing $containerSpacingDesktop;
 		@include sectionTopClipPath;
-		.l-grid {
-			max-width: 1600px;
-			margin: auto;
-		}
 	}
 	.accentSectionClipped__overlapSpacing {
 		padding: inherit $containerSpacingDesktop
@@ -310,8 +318,7 @@ footer {
 		}
 		.skillsSection_skillCard {
 			margin: $spacingFiveDesktop $containerSpacingDesktop;
-			padding: $spacingThreeDesktop $spacingTwoDesktop;
-			max-width: 300px;
+			padding: $spacingThreeDesktop $spacingTwoDesktop;		
 		}
 		.l-grid_ThreeCol1 {
 			order: initial;
@@ -351,9 +358,11 @@ footer {
 			margin: $spacingThreeDesktop auto;
 		}
 	}
-	.sayHelloForm {
+	.contactMe {
 		margin: $spacingThreeDesktop $containerSpacingDesktop $sectionVerticalSpacing
 		$containerSpacingDesktop;
+	}
+	.sayHelloForm {
 		padding: $spacingThreeDesktop;
 		label {
 			margin-top: $spacingThreeDesktop;
@@ -364,9 +373,6 @@ footer {
 		.sayHelloForm_error {
 			min-height: $fontFiveDesktop;
 		}
-	}
-	.container {
-		margin: auto $containerSpacingDesktop;
 	}
 	footer {
 		.footerIcons {

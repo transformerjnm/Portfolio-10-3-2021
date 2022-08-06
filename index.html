@@ -25,7 +25,7 @@
 	</header>
 	<main>
 		<section class="accentSectionClipped accentSectionClipped__overlapSpacing">		
-			<div class="l-grid">
+			<div class="l-grid h-containerWidth">
 				<div class="l-grid_TwoCol1">
 					<h3>Hi, I'm Jacob, nice to meet you.</h3>
 					<p>
@@ -83,25 +83,26 @@
 				</div>
 			</section>
 			<div class="projectsSection">
-				<h4>Exciting Projects</h4>
-				<div class="l-grid">
-					<div class="l-grid_TwoCol1">
-						<div class="projectSection_card  h-flex h-flex_verticalCenter">
-							<img src="images/Us-Bank-Logo.png" alt="UsBank logo" loading="lazy" width="171" height="50px">
+				<div class="h-containerWidth">
+					<h4>Exciting Projects</h4>
+					<div class="l-grid">
+						<div class="l-grid_TwoCol1">
+							<div class="projectSection_card  h-flex h-flex_verticalCenter">
+								<img src="images/Us-Bank-Logo.png" alt="UsBank logo" loading="lazy" width="171" height="50px">
+							</div>
+						</div>
+						<div class="l-grid_TwoCol2 projectsSection_contentBackground">
+							<p>UsBank is an elaborate Liferay(LR) content management system project.While working for Hero Digital, I maintained UsBank’s web site and improved the developer ecosystem.Which was used for internal training at Usbank and  provided services to other banks.</p>
+							<ul>
+								<li>Documented internal code and repetitive tasks</li>
+								<li>Setup gulp environment with babel for Internet explorer 11</li>
+								<li>Built complex user interfaces with dynamic data</li>
+								<li>Updated front end code when upgrading CMS from LR6 to LR7</li>
+							</ul>
 						</div>
 					</div>
-					<div class="l-grid_TwoCol2 projectsSection_contentBackground">
-						<p>UsBank is an elaborate Liferay(LR) content management system project.While working for Hero Digital, I maintained UsBank’s web site and improved the developer ecosystem.Which was used for internal training at Usbank and  provided services to other banks.</p>
-						<ul>
-							<li>Documented internal code and repetitive tasks</li>
-							<li>Setup gulp environment with babel for Internet explorer 11</li>
-							<li>Built complex user interfaces with dynamic data</li>
-							<li>Updated front end code when upgrading CMS from LR6 to LR7</li>
-						</ul>
-					</div>
+					<!-- TODO: Add Twitter Project  -->
 				</div>
-				<!-- TODO: Add Twitter Project  -->
-
 			</div>
 		</div>
 
@@ -112,56 +113,64 @@
 		</div>
 				
 		<section class="companiesWorked">
-			<h4>Awesome companies I've worked for</h4>
-			<div class="companiesWorked_logos">
-				<img src="images/hero-digital-logo.png" alt="Hero Digital Logo" width="199.7" height="100px">
+			<div class="h-containerWidth">
+				<h4>Awesome companies I've worked for</h4>
+				<div class="companiesWorked_logos">
+					<img src="images/hero-digital-logo.png" alt="Hero Digital Logo" width="199.7" height="100px">
+				</div>
 			</div>
 		</section>
 		<section class="myKnowledge">
-			<h5>My knowledge</h5>
-			<div class="l-grid">
-				<div class="l-grid_TwoCol1">
-					<ul>
-						<li>Computer Programming Associate</li>
-						<li>Southern Crescent Technical College</li>
-						<li> December 2019</li>
-						<li>3.9 Grade point average</li>
-						<li>President list 2019</li>
-					</ul>
-					<ul>
-						<li>Full-Stack Coding Bootcamp</li>
-						<li>Nucamp</li>
-						<li>November 2020</li>
-					</ul>
-				</div>
-				<div class="l-grid_TwoCol2">
-					<img src="images/knowledge-spears.svg" alt="" loading="lazy" aria-hidden="true"  width="260px" height="300px">
+			<div class="h-containerWidth">
+				<h5>My knowledge</h5>
+				<div class="l-grid">
+					<div class="l-grid_TwoCol1">
+						<ul>
+							<li>Computer Programming Associate</li>
+							<li>Southern Crescent Technical College</li>
+							<li> December 2019</li>
+							<li>3.9 Grade point average</li>
+							<li>President list 2019</li>
+						</ul>
+						<ul>
+							<li>Full-Stack Coding Bootcamp</li>
+							<li>Nucamp</li>
+							<li>November 2020</li>
+						</ul>
+					</div>
+					<div class="l-grid_TwoCol2">
+						<img src="images/knowledge-spears.svg" alt="" loading="lazy" aria-hidden="true"  width="260px" height="300px">
+					</div>
 				</div>
 			</div>
 		</section>
-		<div class="container">
-			<h6>Say Hello &#x1F44B;</h6>
+		<div class="contactMe">
+			<div class="h-containerWidth">
+				<h6>Say Hello &#x1F44B;</h6>
+
+				<form action="" class="sayHelloForm">
+					<label for="name">Your' Name</label>
+					<input type="text" name="name" pattern="[A-Za-z ]+" id="name" onfocus="sayHelloFormValidation(this)" onKeydown="sayHelloFormValidation(this)" required>
+					<span id="nameError" class="sayHelloForm_error"></span>
+		
+					<label for="email">Your' Email</label>
+					<input type="email" name="email" id="email" onfocus="sayHelloFormValidation(this)" onKeydown="sayHelloFormValidation(this)" required>
+					<span id="emailError" class="sayHelloForm_error"></span>
+		
+					<label for="topic">The Topic</label>
+					<input type="text" name="topic" id="topic" pattern="[A-Za-z0-9 ]+" onfocus="sayHelloFormValidation(this)" onKeydown="sayHelloFormValidation(this)" required>
+					<span id="topicError" class="sayHelloForm_error"></span>
+		
+					<label for="message">Your' Message</label>
+					<textarea name="message" id="message" cols="30" rows="10" onfocus="sayHelloFormValidation(this)" onKeydown="sayHelloFormValidation(this)" required></textarea>
+					<span id="messageError" class="sayHelloForm_error"></span>
+		
+					<!-- TODO: update button styes to have more distinguished focus state  -->
+					<input type="submit" value="Send Message">
+				</form>
+			</div>
 		</div>
-		<form action="" class="sayHelloForm">
-			<label for="name">Your' Name</label>
-			<input type="text" name="name" pattern="[A-Za-z ]+" id="name" onfocus="sayHelloFormValidation(this)" onKeydown="sayHelloFormValidation(this)" required>
-			<span id="nameError" class="sayHelloForm_error"></span>
-
-			<label for="email">Your' Email</label>
-			<input type="email" name="email" id="email" onfocus="sayHelloFormValidation(this)" onKeydown="sayHelloFormValidation(this)" required>
-			<span id="emailError" class="sayHelloForm_error"></span>
-
-			<label for="topic">The Topic</label>
-			<input type="text" name="topic" id="topic" pattern="[A-Za-z0-9 ]+" onfocus="sayHelloFormValidation(this)" onKeydown="sayHelloFormValidation(this)" required>
-			<span id="topicError" class="sayHelloForm_error"></span>
-
-			<label for="message">Your' Message</label>
-			<textarea name="message" id="message" cols="30" rows="10" onfocus="sayHelloFormValidation(this)" onKeydown="sayHelloFormValidation(this)" required></textarea>
-			<span id="messageError" class="sayHelloForm_error"></span>
-
-			<!-- TODO: update button styes to have more distinguished focus state  -->
-			<input type="submit" value="Send Message">
-		</form>
+		
 	</main>
 	<footer>
 		<div class="accentSectionClipped footerIcons">
