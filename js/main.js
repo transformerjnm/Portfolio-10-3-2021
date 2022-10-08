@@ -1,56 +1,31 @@
 let jacobPortfolioJS = (function() {
-	sayHelloFormValidation = (input) => {		
-		let inputName = input.name;
-		let inputErrorOutputClass = inputName+"Error";
-		let errorMessageElement = document.querySelector(`#${inputErrorOutputClass}`);
-		let errorMessage = "";
-		let isValid = input.checkValidity();
-		let isRequired = false;
-		if(input.hasAttribute('required')){
-			isRequired = true;
+	const toggleParticleAnimation = () => {
+		const particlesButton = document.querySelector("#particlesToggleButton");
+		const playParticlesImage = document.querySelector("#playParticles");
+		const pauseParticlesImage = document.querySelector("#pauseParticles");
+
+		if(particlesButton && playParticlesImage && pauseParticlesImage) {
+			if(pJSDom[0].pJS.particles.move.enable) {
+				pJSDom[0].pJS.particles.move.enable = false;
+				particlesButton.ariaLabel = "Play the particle background animation"
+				playParticlesImage.classList.remove('h-hidden');
+				pauseParticlesImage.classList.add('h-hidden');
+				
+			} else {			
+				pJSDom[0].pJS.particles.move.enable = true;
+				pJSDom[0].pJS.fn.particlesRefresh();
+				particlesButton.ariaLabel = "Pause the particle background animation"
+				playParticlesImage.classList.add('h-hidden');
+				pauseParticlesImage.classList.remove('h-hidden');
+			}	
 		}	
-		let isEmpty = (input.value === "" || input.value === null); 
-		console.log(isEmpty);
-		if (!isValid) {
-			switch(inputName) {
-				case "name":
-					errorMessage = "Letters and spaces only.";
-					if(isRequired && isEmpty) {
-						errorMessage = "Name is required";
-					}
-				  	// code block
-				  break;
-				case "email":
-					errorMessage = "Invalid email Format"
-					if(isRequired && isEmpty) {
-						errorMessage = "Email is required";
-					}				
-				  // code block
-				  break;
-				case "topic":
-					errorMessage = "Letters and numbers only.";
-					if(isRequired && isEmpty) {
-						errorMessage = "Topic is required";
-					}
-				  // code block
-				  break;
-				case "message":
-					if(isRequired && isEmpty) {
-						errorMessage = "Message is required";
-					}
-				  // code block
-				  break;			
-			}		
-		}
-		errorMessageElement.textContent = errorMessage; 
 	}
-
 	return {
-		  'sayHelloFormValidation': sayHelloFormValidation,
-	  };
+		'toggleParticleAnimation': toggleParticleAnimation,
+	};
 })() 
-
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
 particlesJS.load('particles-js', '../assets/particlesjs-config.json', function() {
 	console.log('callback - particles.js config loaded');
-  });
+});
+  

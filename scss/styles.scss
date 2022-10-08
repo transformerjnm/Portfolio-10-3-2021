@@ -21,6 +21,9 @@ Modifier: __*
 		flex-grow: 1;
 	}
 }
+.h-hidden {
+	display: none;
+}
 /** layout classes **/
 .l-positionAbsolute {
 	position: absolute;
@@ -72,6 +75,11 @@ Modifier: __*
 .particles-js-canvas-el {
 	position: absolute;
 	z-index: -1;
+}
+.particlesToggleButton {
+	margin: 0 1rem 4rem auto;
+	border-radius: 50%;
+	border: none;
 }
 .accentSectionClipped {
 	background-color: $accentColor;
@@ -195,31 +203,6 @@ Modifier: __*
 	margin: $spacingThree $containerSpacing $sectionVerticalSpacing
 	$containerSpacing;
 }
-.sayHelloForm {
-	@include glassBackground;
-	
-	padding: $spacingThree;
-	label {
-		&:nth-child(1) {
-			margin-top: 0;
-		}
-		display: block;
-		margin-top: $spacingThree;
-	}
-	input,
-	textarea {
-		border-radius: $borderRadius;
-		width: 100%;
-	}
-	input[type="submit"] {
-		margin-top: $spacingThree;
-	}
-	.sayHelloForm_error {
-		display: block;
-		min-height: $fontFive;
-	}
-}
-
 footer {
 	.footerIcons {
 		display: flex;
@@ -347,7 +330,10 @@ footer {
 		}
 		.projectSection_card {
 			margin: $spacingFiveDesktop 0;
-		}
+		}	
+		.l-grid {
+			column-gap: $spacingOne;
+		}	
 	}
 	.companiesWorked {
 		margin: $sectionVerticalSpacing $containerSpacingDesktop;

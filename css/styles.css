@@ -106,7 +106,6 @@ button,
 .button,
 input[type=submit] {
   background-color: #fff;
-  border: 2px solid #ee7e12;
   border-radius: 15px;
   padding: 0.25rem 0.5rem;
   text-decoration: none;
@@ -181,6 +180,10 @@ textarea {
   flex-grow: 1;
 }
 
+.h-hidden {
+  display: none;
+}
+
 /** layout classes **/
 .l-positionAbsolute {
   position: absolute;
@@ -232,6 +235,12 @@ textarea {
 .particles-js-canvas-el {
   position: absolute;
   z-index: -1;
+}
+
+.particlesToggleButton {
+  margin: 0 1rem 4rem auto;
+  border-radius: 50%;
+  border: none;
 }
 
 .accentSectionClipped {
@@ -374,35 +383,6 @@ textarea {
   margin: 1.56rem 2rem 3rem 2rem;
 }
 
-.sayHelloForm {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 15px;
-  padding: 1.56rem;
-}
-.sayHelloForm:before {
-  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
-  filter: blur(10px);
-}
-.sayHelloForm label {
-  display: block;
-  margin-top: 1.56rem;
-}
-.sayHelloForm label:nth-child(1) {
-  margin-top: 0;
-}
-.sayHelloForm input,
-.sayHelloForm textarea {
-  border-radius: 15px;
-  width: 100%;
-}
-.sayHelloForm input[type=submit] {
-  margin-top: 1.56rem;
-}
-.sayHelloForm .sayHelloForm_error {
-  display: block;
-  min-height: 1rem;
-}
-
 footer .footerIcons {
   display: flex;
   flex-direction: column;
@@ -527,6 +507,9 @@ footer .footerDark .footerDark__center {
   }
   .projectsSection .projectSection_card {
     margin: 1.25rem 0;
+  }
+  .projectsSection .l-grid {
+    column-gap: 2.44rem;
   }
   .companiesWorked {
     margin: 3rem 4rem;

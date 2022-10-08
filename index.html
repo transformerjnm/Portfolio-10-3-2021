@@ -7,21 +7,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet preload" type="text/css" href="css/styles.css" />
 	<title>Jacob's Portfolio</title>
-	<!-- TODO: favicon. put favicon in root directory of site. some old browsers may look for it there -->
-	<link rel="icon" type="image/png" href="/favicon.png"/>
-	<!-- TODO: description. should match H1  -->
-	<meta name="description" content="" />
+	<link rel="icon" type="image/png" href="/favicon.icon"/>
+	<meta name="description" content="Front End Developer &amp; Code Enthusiast | Jacob Mitchell" />
 </head>
 <body>
-	<!-- TODO: add a button to be able to stop background animation -->
 	<header id="particles-js" class="heroHeader h-flex h-flex__column">	
 		<a class="button resumeRightButton" href="https://jacobportfolio.com/JacobMitchellResume.pdf">Resume</a>
 		<div class="h-flex h-flex__column h-flex_verticalCenter h-flex__grow">
 			<h1>Front End Developer &amp; Code Enthusiast</h1>
-			<h2>Developing Accessible web applications</h2>
-			<!-- TODO: update this image to next gen format and correct size -->
-			<img class="headshotImage" src="images/jacob-mitchell-headshot.png" alt="" aria-hidden="true" loading="eager" width="150px" height="150px">	
+			<h2>Web Based Problem Solving</h2>
+			<img class="headshotImage" src="images/jacob-mitchell-headshot.webp" alt="Headshot picture of  intelligent and striking Jacob Mitchell" aria-hidden="true" loading="eager" width="150px" height="150px">	
 		</div>
+		<button id="particlesToggleButton" class="particlesToggleButton h-flex" aria-label="Pause the particle background animation" onclick="jacobPortfolioJS.toggleParticleAnimation()">
+			<img width="25px" height="25px" id="pauseParticles" src="/images/pause-solid.svg" alt="">
+			<img width="25px" height="25px" id="playParticles" class="h-hidden" src="/images/play-solid.svg" alt="">
+		</button>
 	</header>
 	<main>
 		<section class="accentSectionClipped accentSectionClipped__overlapSpacing">		
@@ -60,10 +60,6 @@
 								<li>Bootstrap CSS</li>
 								<li>Materialize CSS</li>
 							</ul>
-							<h3>Others</h3>
-							<ul>
-								<li>Node, NPM, NVM</li>
-							</ul>
 						</div>				
 					</div>
 					<div class="l-grid_ThreeCol3">
@@ -77,6 +73,8 @@
 								<li>Jira</li>
 								<li>Github, Git</li>
 								<li>Bitbucket</li>
+								<li>Docker</li>
+								<li>NPM, NVM</li>
 							</ul>
 						</div>					
 					</div>
@@ -97,7 +95,8 @@
 								<li>Documented internal code and repetitive tasks</li>
 								<li>Setup gulp environment with babel for Internet explorer 11</li>
 								<li>Built complex user interfaces with dynamic data</li>
-								<li>Updated front end code when upgrading CMS from LR6 to LR7</li>
+								<li>Converted depreciated code when upgrading CMS versions</li>
+								<li>Implemented WCAG AA compliance changes</li>
 							</ul>
 						</div>
 					</div>
@@ -105,13 +104,11 @@
 				</div>
 			</div>
 		</div>
-
 		<div class="l-grid gitChainBackgroundContainer">
 			<div class="gitChainBackgroundContainer_gitChainBackground">
 
 			</div>
-		</div>
-				
+		</div>			
 		<section class="companiesWorked">
 			<div class="h-containerWidth">
 				<h4>Awesome companies I've worked for</h4>
@@ -143,34 +140,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
-		<div class="contactMe">
-			<div class="h-containerWidth">
-				<h6>Say Hello &#x1F44B;</h6>
-
-				<form action="" class="sayHelloForm">
-					<label for="name">Your' Name</label>
-					<input type="text" name="name" pattern="[A-Za-z ]+" id="name" onfocus="sayHelloFormValidation(this)" onKeydown="sayHelloFormValidation(this)" required>
-					<span id="nameError" class="sayHelloForm_error"></span>
-		
-					<label for="email">Your' Email</label>
-					<input type="email" name="email" id="email" onfocus="sayHelloFormValidation(this)" onKeydown="sayHelloFormValidation(this)" required>
-					<span id="emailError" class="sayHelloForm_error"></span>
-		
-					<label for="topic">The Topic</label>
-					<input type="text" name="topic" id="topic" pattern="[A-Za-z0-9 ]+" onfocus="sayHelloFormValidation(this)" onKeydown="sayHelloFormValidation(this)" required>
-					<span id="topicError" class="sayHelloForm_error"></span>
-		
-					<label for="message">Your' Message</label>
-					<textarea name="message" id="message" cols="30" rows="10" onfocus="sayHelloFormValidation(this)" onKeydown="sayHelloFormValidation(this)" required></textarea>
-					<span id="messageError" class="sayHelloForm_error"></span>
-		
-					<!-- TODO: update button styes to have more distinguished focus state  -->
-					<input type="submit" value="Send Message">
-				</form>
-			</div>
-		</div>
-		
+		</section>			
 	</main>
 	<footer>
 		<div class="accentSectionClipped footerIcons">

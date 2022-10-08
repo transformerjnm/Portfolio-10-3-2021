@@ -1,4 +1,3 @@
-//Comments using two forward slashes will not be compiled into the css.
 // Color Pallet
 $baseColor: #f6f6f6; // light grey
 $lightBaseColor: #fff;
@@ -195,7 +194,6 @@ button,
 .button,
 input[type="submit"] {
 	background-color: $lightBaseColor;
-	border: 2px solid $accentColor;
 	border-radius: $borderRadiusButton;
 	padding: 0.25rem 0.5rem;
 	text-decoration: none;
